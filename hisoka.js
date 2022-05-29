@@ -1,8 +1,3 @@
-/**
-   * Create By Dika Ardnt.
-   * Contact Me on wa.me/6288292024190
-   * Follow https://github.com/DikaArdnt
-*/
 
 require('./config')
 const { BufferJSON, WA_DEFAULT_EPHEMERAL, generateWAMessageFromContent, proto, generateWAMessageContent, generateWAMessage, prepareWAMessageMedia, areJidsSameUser, getContentType } = require('@adiwajshing/baileys')
@@ -540,11 +535,11 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
             }
             break
 	    case 'donasi': case 'sewabot': case 'sewa': case 'buypremium': case 'donate': {
-                hisoka.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/74fd634010128be37972c.jpg' }, caption: `*Hai Kak ${m.pushName}*\n\n Bot Rental Prices\n⭔ 13k Per Group via E-Walet 1 Month\n⭔ 18k via pulsa 1 Month\n\n Premium Price Bot\n⭔ 8k per User 1 bulan\n\nPayment can be via Paypal/link aja/pulsa\n\nFor more details, you can chat with the owner\nhttps://wa.me/6288292024190 (Owner)\n\nDonate For Me : \n\n⭔ Paypal : https://www.paypal.me/Cakhaho\n⭔ Saweria : https://saweria.co/DikaArdnt` }, { quoted: m })
+                hisoka.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/74fd634010128be37972c.jpg' }, caption: `*Hai Kak ${m.pushName}*\n\n Bot Rental Prices\n⭔ 13k Per Group via E-Walet 1 Month\n⭔ 18k via pulsa 1 Month\n\n Premium Price Bot\n⭔ 8k per User 1 bulan\n\nPayment can be via Paypal/link aja/pulsa\n\nFor more details, you can chat with the owner\nhttps://wa.me/6288292024190 (Owner)\n\nDonate For Me : \n\n⭔ Paypal : https://www.paypal.me/Cakhaho\n⭔ Saweria : https://saweria.co/IkyAds` }, { quoted: m })
             }
             break
             case 'sc': {
-                m.reply('Script : https://github.com/DikaArdnt/Hisoka-Morou\n\n Dont Forget Give Star\n\nDonate : 6281615075793 (Link Aja)\nSaweria : https://saweria.co/DikaArdnt\nPaypal : https://www.paypal.me/Cakhaho\n\n Dont Forget Donate')
+                m.reply('Script : https://github.com/rizkiadiasa\n\n Dont Forget Give Star\n\nDonate : 6283141727903 (Link Aja)\nSaweria : https://saweria.co/\nPaypal : https://www.paypal.me/Ikyads\n\n Dont Forget Donate')
             }
             break
             case 'chat': {
@@ -1147,7 +1142,7 @@ break
                     let btn = [{
                                 urlButton: {
                                     displayText: 'Source Code',
-                                    url: 'https://github.com/DikaArdnt/Hisoka-Morou'
+                                    url: 'https://github.com/rizkiadiasa'
                                 }
                             }, {
                                 callButton: {
@@ -1186,7 +1181,7 @@ break
 		    let btn = [{
                                 urlButton: {
                                     displayText: 'Source Code',
-                                    url: 'https://github.com/DikaArdnt/Hisoka-Morou'
+                                    url: 'https://github.com/rizkiadiasa'
                                 }
                             }, {
                                 callButton: {
@@ -1316,7 +1311,8 @@ break
 	    break
 	       case 'attp': case 'ttp': {
            if (!text) throw `Example : ${prefix + command} text`
-           await hisoka.sendMedia(m.chat, `https://xteam.xyz/${command}?file&text=${text}`, 'hisoka', 'morou', m, {asSticker: true})
+           await hisoka.sendMedia(m.chat, `https://xteam.xyz/${command}?file&text=${text}`, 'hisoka', 'morou', m, {asSticker: true})
+
          }
          break
 	       case 'smeme': case 'stickmeme': case 'stikmeme': case 'stickermeme': case 'stikermeme': {
@@ -1704,7 +1700,7 @@ break
             }
             break
             case 'ramalanjodoh': case 'ramaljodoh': {
-                if (!text) throw `Example : ${prefix + command} Dika, 7, 7, 2005, Novia, 16, 11, 2004`
+                if (!text) throw `Example : ${prefix + command} Ikyiii, 7, 7, 2005, Novia, 16, 11, 2004`
                 let [nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2] = text.split`,`
                 let anu = await primbon.ramalan_jodoh(nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2)
                 if (anu.status == false) return m.reply(anu.message)
@@ -1712,7 +1708,7 @@ break
             }
             break
             case 'ramalanjodohbali': case 'ramaljodohbali': {
-                if (!text) throw `Example : ${prefix + command} Dika, 7, 7, 2005, Novia, 16, 11, 2004`
+                if (!text) throw `Example : ${prefix + command} Ikyiii, 7, 7, 2005, Novia, 16, 11, 2004`
                 let [nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2] = text.split`,`
                 let anu = await primbon.ramalan_jodoh_bali(nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2)
                 if (anu.status == false) return m.reply(anu.message)
@@ -1720,7 +1716,7 @@ break
             }
             break
             case 'suamiistri': {
-                if (!text) throw `Example : ${prefix + command} Dika, 7, 7, 2005, Novia, 16, 11, 2004`
+                if (!text) throw `Example : ${prefix + command} Ikyiii, 7, 7, 2005, Novia, 16, 11, 2004`
                 let [nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2] = text.split`,`
                 let anu = await primbon.suami_istri(nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2)
                 if (anu.status == false) return m.reply(anu.message)
@@ -1728,7 +1724,7 @@ break
             }
             break
             case 'ramalancinta': case 'ramalcinta': {
-                if (!text) throw `Example : ${prefix + command} Dika, 7, 7, 2005, Novia, 16, 11, 2004`
+                if (!text) throw `Example : ${prefix + command} Ikyiii, 7, 7, 2005, Novia, 16, 11, 2004`
                 let [nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2] = text.split`,`
                 let anu = await primbon.ramalan_cinta(nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2)
                 if (anu.status == false) return m.reply(anu.message)
@@ -1743,7 +1739,7 @@ break
             }
             break
             case 'kecocokannama': case 'cocoknama': {
-                if (!text) throw `Example : ${prefix + command} Dika, 7, 7, 2005`
+                if (!text) throw `Example : ${prefix + command} Ikyiii, 7, 7, 2005`
                 let [nama, tgl, bln, thn] = text.split`,`
                 let anu = await primbon.kecocokan_nama(nama, tgl, bln, thn)
                 if (anu.status == false) return m.reply(anu.message)
@@ -1815,7 +1811,7 @@ break
             }
             break
             case 'fengshui': {
-                if (!text) throw `Example : ${prefix + command} Dika, 1, 2005\n\nNote : ${prefix + command} Nama, gender, tahun lahir\nGender : 1 untuk laki-laki & 2 untuk perempuan`
+                if (!text) throw `Example : ${prefix + command} Ikyiii, 1, 2005\n\nNote : ${prefix + command} Nama, gender, tahun lahir\nGender : 1 untuk laki-laki & 2 untuk perempuan`
                 let [nama, gender, tahun] = text.split`,`
                 let anu = await primbon.perhitungan_feng_shui(nama, gender, tahun)
                 if (anu.status == false) return m.reply(anu.message)
@@ -1863,7 +1859,7 @@ break
             }
             break
             case 'peruntungan': {
-                if (!text) throw `Example : ${prefix + command} DIka, 7, 7, 2005, 2022\n\nNote : ${prefix + command} Nama, tanggal lahir, bulan lahir, tahun lahir, untuk tahun`
+                if (!text) throw `Example : ${prefix + command} Ikyiii, 7, 7, 2005, 2022\n\nNote : ${prefix + command} Nama, tanggal lahir, bulan lahir, tahun lahir, untuk tahun`
                 let [nama, tgl, bln, thn, untuk] = text.split`,`
                 let anu = await primbon.ramalan_peruntungan(nama, tgl, bln, thn, untuk)
                 if (anu.status == false) return m.reply(anu.message)
@@ -1879,7 +1875,7 @@ break
             }
             break
             case 'sifat': case 'karakter': {
-                if (!text) throw `Example : ${prefix + command} Dika, 7, 7, 2005`
+                if (!text) throw `Example : ${prefix + command} Ikyiii, 7, 7, 2005`
                 let [nama, tgl, bln, thn] = text.split`,`
                 let anu = await primbon.sifat_karakter_tanggal_lahir(nama, tgl, bln, thn)
                 if (anu.status == false) return m.reply(anu.message)
@@ -1887,7 +1883,7 @@ break
             }
             break
             case 'keberuntungan': {
-                if (!text) throw `Example : ${prefix + command} Dika, 7, 7, 2005`
+                if (!text) throw `Example : ${prefix + command} Ikyiii, 7, 7, 2005`
                 let [nama, tgl, bln, thn] = text.split`,`
                 let anu = await primbon.potensi_keberuntungan(nama, tgl, bln, thn)
                 if (anu.status == false) return m.reply(anu.message)
@@ -2725,332 +2721,17 @@ let capt = `⭔ Title: ${judul}
             }
             break
             case 'list': case 'menu': case 'help': case '?': {
-                anu = `┌──⭓ *Group Menu*
-│
-│⭔ ${prefix}linkgroup
-│⭔ ${prefix}ephemeral [option]
-│⭔ ${prefix}setppgc [image]
-│⭔ ${prefix}setname [text]
-│⭔ ${prefix}setdesc [text]
-│⭔ ${prefix}group [option]
-│⭔ ${prefix}editinfo [option]
-│⭔ ${prefix}add @user
-│⭔ ${prefix}kick @user
-│⭔ ${prefix}hidetag [text]
-│⭔ ${prefix}tagall [text]
-│⭔ ${prefix}antilink [on/off]
-│⭔ ${prefix}mute [on/off]
-│⭔ ${prefix}promote @user
-│⭔ ${prefix}demote @user
-│⭔ ${prefix}vote [text]
-│⭔ ${prefix}devote
-│⭔ ${prefix}upvote
-│⭔ ${prefix}cekvote
-│⭔ ${prefix}hapusvote
-│
-└───────⭓
-
-┌──⭓ *Webzone Menu*
-│
-│⭔ ${prefix}playstore
-│⭔ ${prefix}gsmarena
-│⭔ ${prefix}jadwalbioskop
-│⭔ ${prefix}nowplayingbioskop
-│⭔ ${prefix}aminio
-│⭔ ${prefix}wattpad
-│⭔ ${prefix}webtoons
-│⭔ ${prefix}drakor
-│
-└───────⭓
-
-
-┌──⭓ *Downloader Menu*
-│
-│⭔ ${prefix}tiktoknowm [url]
-│⭔ ${prefix}tiktokwm [url]
-│⭔ ${prefix}tiktokmp3 [url]
-│⭔ ${prefix}instagram [url]
-│⭔ ${prefix}twitter [url]
-│⭔ ${prefix}twittermp3 [url]
-│⭔ ${prefix}facebook [url]
-│⭔ ${prefix}pinterestdl [url]
-│⭔ ${prefix}ytmp3 [url]
-│⭔ ${prefix}ytmp4 [url]
-│⭔ ${prefix}getmusic [query]
-│⭔ ${prefix}getvideo [query]
-│⭔ ${prefix}umma [url]
-│⭔ ${prefix}joox [query]
-│⭔ ${prefix}soundcloud [url]
-│
-└───────⭓
-
-┌──⭓ *Search Menu*
-│
-│⭔ ${prefix}play [query]
-│⭔ ${prefix}yts [query]
-│⭔ ${prefix}google [query]
-│⭔ ${prefix}gimage [query]
-│⭔ ${prefix}pinterest [query]
-│⭔ ${prefix}wallpaper [query]
-│⭔ ${prefix}wikimedia [query]
-│⭔ ${prefix}ytsearch [query]
-│⭔ ${prefix}ringtone [query]
-│⭔ ${prefix}stalk [option] [query]
-│
-└───────⭓
-
-┌──⭓ *Random Menu*
-│
-│⭔ ${prefix}coffe
-│⭔ ${prefix}quotesanime
-│⭔ ${prefix}motivasi
-│⭔ ${prefix}dilanquote
-│⭔ ${prefix}bucinquote
-│⭔ ${prefix}katasenja
-│⭔ ${prefix}puisi
-│⭔ ${prefix}couple
-│⭔ ${prefix}anime
-│⭔ ${prefix}waifu
-│⭔ ${prefix}husbu
-│⭔ ${prefix}neko
-│⭔ ${prefix}shinobu
-│⭔ ${prefix}waifus (nsfw)
-│⭔ ${prefix}nekos (nsfw)
-│⭔ ${prefix}trap (nsfw)
-│⭔ ${prefix}blowjob (nsfw)
-│
-└───────⭓
-
-┌──⭓ *Text Pro Menu*
-│
-│⭔ ${prefix}3dchristmas
-│⭔ ${prefix}3ddeepsea
-│⭔ ${prefix}americanflag
-│⭔ ${prefix}3dscifi
-│⭔ ${prefix}3drainbow
-│⭔ ${prefix}3dwaterpipe
-│⭔ ${prefix}halloweenskeleton
-│⭔ ${prefix}sketch
-│⭔ ${prefix}bluecircuit
-│⭔ ${prefix}space
-│⭔ ${prefix}metallic
-│⭔ ${prefix}fiction
-│⭔ ${prefix}greenhorror
-│⭔ ${prefix}transformer
-│⭔ ${prefix}berry
-│⭔ ${prefix}thunder
-│⭔ ${prefix}magma
-│⭔ ${prefix}3dcrackedstone
-│⭔ ${prefix}3dneonlight
-│⭔ ${prefix}impressiveglitch
-│⭔ ${prefix}naturalleaves
-│⭔ ${prefix}fireworksparkle
-│⭔ ${prefix}matrix
-│⭔ ${prefix}dropwater
-│⭔ ${prefix}harrypotter
-│⭔ ${prefix}foggywindow
-│⭔ ${prefix}neondevils
-│⭔ ${prefix}christmasholiday
-│⭔ ${prefix}3dgradient
-│⭔ ${prefix}blackpink
-│⭔ ${prefix}gluetext
-│
-└───────⭓
-
-┌──⭓ *Photo Oxy Menu*
-│
-│⭔ ${prefix}shadow
-│⭔ ${prefix}romantic
-│⭔ ${prefix}smoke
-│⭔ ${prefix}burnpapper
-│⭔ ${prefix}naruto
-│⭔ ${prefix}lovemsg
-│⭔ ${prefix}grassmsg
-│⭔ ${prefix}lovetext
-│⭔ ${prefix}coffecup
-│⭔ ${prefix}butterfly
-│⭔ ${prefix}harrypotter
-│⭔ ${prefix}retrolol
-│
-└───────⭓
-
-┌──⭓ *Ephoto Menu*
-│
-│⭔ ${prefix}ffcover
-│⭔ ${prefix}crossfire
-│⭔ ${prefix}galaxy
-│⭔ ${prefix}glass
-│⭔ ${prefix}neon
-│⭔ ${prefix}beach
-│⭔ ${prefix}blackpink
-│⭔ ${prefix}igcertificate
-│⭔ ${prefix}ytcertificate
-│
-└───────⭓
-
-┌──⭓ *Fun Menu*
-│
-│⭔ ${prefix}simih
-│⭔ ${prefix}halah
-│⭔ ${prefix}hilih
-│⭔ ${prefix}huluh
-│⭔ ${prefix}heleh
-│⭔ ${prefix}holoh
-│⭔ ${prefix}jadian
-│⭔ ${prefix}jodohku
-│⭔ ${prefix}delttt
-│⭔ ${prefix}tictactoe
-│⭔ ${prefix}family100
-│⭔ ${prefix}tebak [option]
-│⭔ ${prefix}math [mode]
-│⭔ ${prefix}suitpvp [@tag]
-│
-└───────⭓
-
-┌──⭓ *Primbon Menu*
-│
-│⭔ ${prefix}nomorhoki
-│⭔ ${prefix}artimimpi
-│⭔ ${prefix}artinama
-│⭔ ${prefix}ramaljodoh
-│⭔ ${prefix}ramaljodohbali
-│⭔ ${prefix}suamiistri
-│⭔ ${prefix}ramalcinta
-│⭔ ${prefix}cocoknama
-│⭔ ${prefix}pasangan
-│⭔ ${prefix}jadiannikah
-│⭔ ${prefix}sifatusaha
-│⭔ ${prefix}rezeki
-│⭔ ${prefix}pekerjaan
-│⭔ ${prefix}nasib
-│⭔ ${prefix}penyakit
-│⭔ ${prefix}tarot
-│⭔ ${prefix}fengshui
-│⭔ ${prefix}haribaik
-│⭔ ${prefix}harisangar
-│⭔ ${prefix}harisial
-│⭔ ${prefix}nagahari
-│⭔ ${prefix}arahrezeki
-│⭔ ${prefix}peruntungan
-│⭔ ${prefix}weton
-│⭔ ${prefix}karakter
-│⭔ ${prefix}keberuntungan
-│⭔ ${prefix}memancing
-│⭔ ${prefix}masasubur
-│⭔ ${prefix}zodiak
-│⭔ ${prefix}shio
-│
-└───────⭓
-
-┌──⭓ *Convert Menu*
-│
-│⭔ ${prefix}attp
-│⭔ ${prefix}ttp
-│⭔ ${prefix}toimage
-│⭔ ${prefix}removebg
-│⭔ ${prefix}sticker
-│⭔ ${prefix}emojimix
-│⭔ ${prefix}emojimix2
-│⭔ ${prefix}tovideo
-│⭔ ${prefix}togif
-│⭔ ${prefix}tourl
-│⭔ ${prefix}tovn
-│⭔ ${prefix}tomp3
-│⭔ ${prefix}toaudio
-│⭔ ${prefix}ebinary
-│⭔ ${prefix}dbinary
-│⭔ ${prefix}styletext
-│⭔ ${prefix}smeme
-│
-└───────⭓
-
-┌──⭓ *Main Menu*
-│
-│⭔ ${prefix}ping
-│⭔ ${prefix}owner
-│⭔ ${prefix}menu / ${prefix}help / ${prefix}?
-│⭔ ${prefix}delete
-│⭔ ${prefix}infochat
-│⭔ ${prefix}quoted
-│⭔ ${prefix}listpc
-│⭔ ${prefix}listgc
-│⭔ ${prefix}listonline
-│⭔ ${prefix}speedtest
-│
-└───────⭓
-
-┌──⭓ *Database Menu*
-│
-│⭔ ${prefix}setcmd
-│⭔ ${prefix}listcmd
-│⭔ ${prefix}delcmd
-│⭔ ${prefix}lockcmd
-│⭔ ${prefix}addmsg
-│⭔ ${prefix}listmsg
-│⭔ ${prefix}getmsg
-│⭔ ${prefix}delmsg
-│
-└───────⭓
-
-┌──⭓ *Anonymous Menu*
-│
-│⭔ ${prefix}anonymous
-│⭔ ${prefix}start
-│⭔ ${prefix}next
-│⭔ ${prefix}keluar
-│
-└───────⭓
-
-┌──⭓ *Islamic Menu*
-│
-│⭔ ${prefix}iqra
-│⭔ ${prefix}hadist
-│⭔ ${prefix}alquran
-│⭔ ${prefix}juzamma
-│⭔ ${prefix}tafsirsurah
-│
-└───────⭓
-
-┌──⭓ *Voice Changer*
-│
-│⭔ ${prefix}bass
-│⭔ ${prefix}blown
-│⭔ ${prefix}deep
-│⭔ ${prefix}earrape
-│⭔ ${prefix}fast
-│⭔ ${prefix}fat
-│⭔ ${prefix}nightcore
-│⭔ ${prefix}reverse
-│⭔ ${prefix}robot
-│⭔ ${prefix}slow
-│⭔ ${prefix}tupai
-│
-└───────⭓
-
-┌──⭓ *Owner Menu*
-│
-│⭔ ${prefix}react [emoji]
-│⭔ ${prefix}chat [option]
-│⭔ ${prefix}join [link]
-│⭔ ${prefix}leave
-│⭔ ${prefix}block @user
-│⭔ ${prefix}unblock @user
-│⭔ ${prefix}bcgroup [text]
-│⭔ ${prefix}bcall [text]
-│⭔ ${prefix}setppbot [image]
-│⭔ ${prefix}setexif
-│⭔ ${prefix}setmenu [option]
-│
-└───────⭓`
+                anu = ` [ MAINTENANCE]
+                #MASIH DALAM TAHAP PENGEMBANGAN`
                 let btn = [{
                                 urlButton: {
                                     displayText: 'Source Code',
-                                    url: 'https://github.com/DikaArdnt/Hisoka-Morou'
+                                    url: 'https://github.com/rizkiadiasa'
                                 }
                             }, {
                                 callButton: {
                                     displayText: 'Number Phone Owner',
-                                    phoneNumber: '+62 882-9202-4190'
+                                    phoneNumber: '6285215319934'
                                 }
                             }, {
                                 quickReplyButton: {
