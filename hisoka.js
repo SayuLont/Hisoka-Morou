@@ -518,6 +518,66 @@ Ketik *nyerah* untuk menyerah dan mengakui kekalahan`
             }
             }
             break
+case 'sakit':
+reply('Semoga lekas sembuh ka🥺')
+break
+
+case 'urusan':
+reply('Baik kak')
+break
+
+case 'hadir':
+reply(`Siap ka ${pushname}`)
+break
+case 'absen':
+ anu = `Selamat pagi tekan tombol di bawah untuk absen
+`
+                let btn = [{
+                                
+                                callButton: {
+                                    displayText: 'Number Phone Owner',
+                                    phoneNumber: '6285215319934'
+                                }
+                            },  {
+                                quickReplyButton: {
+                                    displayText: 'Izin',
+                                    id: 'izin'
+                                }  
+                            }, {
+                                quickReplyButton: {
+                                    displayText: 'Hadir',
+                                    id: 'hadir'
+                                }
+                            }]
+                         let setbot = db.data.settings[botNumber]
+                        if (setbot.templateImage) {
+                        hisoka.send5ButImg(m.chat, anu, hisoka.user.name, { url: 'https://telegra.ph/file/f4f4ef5fdb64d2ca75af2.jpg' } , btn)
+                        } else if (setbot.templateGif) {
+                        hisoka.send5ButGif(m.chat, anu, hisoka.user.name, global.visoka, btn)
+                        } else if (setbot.templateVid) {
+                        hisoka.send5ButVid(m.chat, anu, hisoka.user.name, global.visoka, btn)
+                        } else if (setbot.templateMsg) {
+                        hisoka.send5ButMsg(m.chat, anu, hisoka.user.name, btn)
+                        }
+                        break
+case 'izin':
+jawab = `Izin kenapa ka ${pushname} ?`
+            let buttons = [
+                        { buttonId: 'sakit', buttonText: { displayText: 'Sakit' }, type: 1 } , { buttonId: 'urusan', buttonText: { displayText: 'Urusan lain' }, type: 1 }
+                    ]
+                    await hisoka.sendButtonText(m.chat, buttons, jawab, hisoka.user.name, m)
+          break
+  case 'react': {
+                if (!isCreator) throw mess.owner
+                reactionMessage = {
+                    react: {
+                        text: args[0],
+                        key: { remoteJid: m.chat, fromMe: true, id: quoted.id }
+                    }
+                }
+                hisoka.sendMessage(m.chat, reactionMessage)
+            }
+            break  
             case 'suitpvp': case 'suit': {
             this.suit = this.suit ? this.suit : {}
             let poin = 10
