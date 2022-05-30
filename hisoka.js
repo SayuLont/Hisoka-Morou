@@ -680,7 +680,7 @@ d = `${z.rajaongkir.results.postal_code}`
 e = `${z.rajaongkir.results.province_id}`
 f = `${z.rajaongkir.results.city_id}`
 m.reply(`
-Data di temukan\n\n• kota id : ${f}\n• kota : ${b}\n• gelar type : ${c}\n• provinsi id : ${e}\n• provinsi : ${a}\nkode pos : ${d}`)
+Data di temukan\n\n• kota id : ${f}\n• kota : ${b}\n• gelar type : ${c}\n• provinsi id : ${e}\n• provinsi : ${a}\n• kode pos : ${d}`)
 break
           case 'sakit':
           reply('Semoga lekas sembuh ka🥺')
