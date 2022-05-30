@@ -532,7 +532,7 @@
      case 'absen':
       anu = `Selamat pagi tekan tombol di bawah untuk absen
      `
-                     let btn = [{
+                     btn = [{
                                      
                                      callButton: {
                                          displayText: 'Number Phone Owner',
@@ -1212,7 +1212,7 @@
                      m.reply(`Mengirim Broadcast Ke ${anu.length} Group Chat, Waktu Selesai ${anu.length * 1.5} detik`)
                      for (let i of anu) {
                          await sleep(1500)
-                         let btn = [{
+                         btn = [{
                                      urlButton: {
                                          displayText: 'Source Code',
                                          url: 'https://github.com/rizkiadiasa'
@@ -1251,7 +1251,7 @@
                      m.reply(`Mengirim Broadcast Ke ${anu.length} Chat\nWaktu Selesai ${anu.length * 1.5} detik`)
      		for (let yoi of anu) {
      		    await sleep(1500)
-     		    let btn = [{
+     		    btn = [{
                                      urlButton: {
                                          displayText: 'Source Code',
                                          url: 'https://github.com/rizkiadiasa'
@@ -2815,11 +2815,11 @@
      hisoka.sendMessage(m.chat, {document: laundry, mimetype: 'application/pdf', fileName: `UpLaundry.pdf`}, {quoted:m}).catch ((err) => m.reply(oh))
      break
      
-     case 'menu': case 'help':
+     case 'menu': case 'help': 
       anu = `hallo ka ada yang bisa saya bantu?\n\n#listproduk ( untuk menampilkan stokproduk)\n#pemilikbisnis
      
      `
-                     btn = [{
+                     menub = [{
                                      
                                      callButton: {
                                          displayText: 'Number Phone Owner',
@@ -2838,13 +2838,13 @@
                                  }]
                               setbot = db.data.settings[botNumber]
                              if (setbot.templateImage) {
-                             hisoka.send5ButImg(m.chat, anu, hisoka.user.name, { url: 'https://telegra.ph/file/b7d09751a323627b35a04.jpg' } , btn)
+                             hisoka.send5ButImg(m.chat, anu, hisoka.user.name, { url: 'https://telegra.ph/file/b7d09751a323627b35a04.jpg' } , menub)
                              } else if (setbot.templateGif) {
-                             hisoka.send5ButGif(m.chat, anu, hisoka.user.name, global.visoka, btn)
+                             hisoka.send5ButGif(m.chat, anu, hisoka.user.name, global.visoka, menub)
                              } else if (setbot.templateVid) {
-                             hisoka.send5ButVid(m.chat, anu, hisoka.user.name, global.visoka, btn)
+                             hisoka.send5ButVid(m.chat, anu, hisoka.user.name, global.visoka, menub)
                              } else if (setbot.templateMsg) {
-                             hisoka.send5ButMsg(m.chat, anu, hisoka.user.name, btn)
+                             hisoka.send5ButMsg(m.chat, hisoka.user.name, global.visoka, menub) 
                              }
                              break
                  
