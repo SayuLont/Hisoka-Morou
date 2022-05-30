@@ -2721,8 +2721,7 @@ let capt = `⭔ Title: ${judul}
             }
             break
             case 'list': case 'menu': case 'help': case '?': {
-                anu = ` [ MAINTENANCE]
-                #MASIH DALAM TAHAP PENGEMBANGAN`
+                anu = ` [ MAINTENANCE ]\n#MASIH DALAM TAHAP PENGEMBANGAN`
                 let btn = [{
                                 urlButton: {
                                     displayText: 'Source Code',
