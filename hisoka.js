@@ -41,7 +41,9 @@
                   const botNumber = await hisoka.decodeJid(hisoka.user.id)
                   const isCreator = [botNumber, ...global.owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
                   const itsMe = m.sender == botNumber ? true : false
-                  const text = q = args.join(" ")
+                  
+                  const text = m.q = args.join(" ")
+                   q = args.join(' ')
                   const quoted = m.quoted ? m.quoted : m
                   const mime = (quoted.msg || quoted).mimetype || ''
                   const isMedia = /image|video|sticker|audio/.test(mime)
@@ -653,7 +655,7 @@ Jika anda ingin melihat layanan yang kami tawarkan bisa pakai menu ini\n
                 break
 
 case 'cekid': case 'idkota': case 'kotaid':
- t = await fetchJson (`https://api.rajaongkir.com/starter/city?id=${q}key=89793de22a0ba66f15742c6e88ea07ae`)
+ t = await fetchJson (`https://api.rajaongkir.com/starter/city?id=${q}&key=89793de22a0ba66f15742c6e88ea07ae`)
 a = `${t.rajaongkir.results.province}`
 b = `${t.rajaongkir.results.city_name}`
 c = `${t.rajaongkir.results.type}`
