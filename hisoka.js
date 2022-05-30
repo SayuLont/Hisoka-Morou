@@ -527,35 +527,43 @@ anu = `
 *J - MENU*
 
 *J Group Layanan*
+
 Jika anda ingin melihat layanan yang kami tawarkan bisa pakai menu ini\n
 #produk
 #promo
 
 *J Group Kerjasama*
+
 #kerjasama dropship
 #Kerjasama bagihasil
 #hubungi admin J Group
 
 *Franchise Ice Motivasi*
+
 #absen teras
 #hubungi admin Franchise
 
 *Franchise J Food*
+
 #hubungi admin Franchise
 
 *J Food Agen*
+
 #produk
 #hubungi admin Agen
 
 *Jhee Production (seputaran t-shirt)*
+
 #produk
 #hubungi admin Jhee Production
 
 *Hijabku (seputaran hijab)*
+
 #produk
 #hubungi admin Hijabku
 
 *Jeje Arisan*
+
 #hubungi admin Jeje Arisan
 
  *Simple Menu*
