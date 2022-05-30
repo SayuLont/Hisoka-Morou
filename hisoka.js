@@ -2795,6 +2795,7 @@ let capt = `⭔ Title: ${judul}
             break
 case 'listproduk':
      case 'stokproduk':
+          reply (`baik ka tunggu mohon tunggu sebentar`)
 	kecantikan = await getBuffer(`https://a.uguu.se/pZZTLKq.pdf`)
 muslim = await getBuffer(`https://a.uguu.se/KJwUzrNv.pdf`)
 minum = await getBuffer(`https://a.uguu.se/fhWOfwi.pdf`)
