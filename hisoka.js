@@ -611,6 +611,7 @@ anu = `
                     }
                 }), { userJid: m.chat, quoted: m })
                 hisoka.relayMessage(m.chat, template.message, { messageId: template.key.id })
+                break
           case 'sakit':
           reply('Semoga lekas sembuh ka🥺')
           break
