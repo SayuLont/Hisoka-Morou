@@ -2762,8 +2762,17 @@ let capt = `⭔ Title: ${judul}
                      }
             break
             default:
-                if (budy.startsWith('=>')) {
-                    if (!isCreator) return m.reply(mess.owner)
+            
+            if (/^=?>/.test(budy)){
+
+	if (!isCreator) return m.reply(mess.owner)
+
+  let parse = /^=>/.test(budy) ? budy.replace(/^=>/,'return') : budy.replace(/^>/,'')
+
+ 
+
+
+                
                     function Return(sul) {
                         sat = JSON.stringify(sul, null, 2)
                         bang = util.format(sat)
