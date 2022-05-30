@@ -18,7 +18,9 @@ global.APIKeys = {
 }
 
 // Other
-global.owner = ['6285215319934','6281382420312','6288292024190']
+
+global.owner = ['6285215319934']
+global.pemilikbisnis = ['6289696435508']
 global.premium = ['6285215319934']
 global.packname = 'ikyiii Ads'
 global.author = 'WhatsApp Bot'
