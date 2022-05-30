@@ -657,8 +657,11 @@ Jika anda ingin melihat layanan yang kami tawarkan bisa pakai menu ini\n
                 hisoka.relayMessage(m.chat, template.message, { messageId: template.key.id })
                 break
 
-case 'cekid': case 'idkota': case 'kotaid':
- t = await fetchJson (`https://api.rajaongkir.com/starter/city?id=${q}&key=89793de22a0ba66f15742c6e88ea07ae`)
+
+case 'cekidprov': case 'idprovinsi': case 'provinsiid':
+
+ t = await fetchJson (`https://api.rajaongkir.com/starter/province?id=${q}&key=89793de22a0ba66f15742c6e88ea07ae`)
+
 a = `${t.rajaongkir.results.province}`
 b = `${t.rajaongkir.results.city_name}`
 c = `${t.rajaongkir.results.type}`
@@ -666,7 +669,18 @@ d = `${t.rajaongkir.results.postal_code}`
 e = `${t.rajaongkir.results.province_id}`
 f = `${t.rajaongkir.results.city_id}`
 m.reply(`
-• city id : ${f}\n• province id : ${e}\n• province : ${a}\n• type : ${c}\n• city name : ${b}\n• postal code : ${d}`)
+• provinsi id : ${e}\n• provinsi : ${a}`)
+break
+case 'idkota': case 'kotaid': case 'kotaid':
+ t = await fetchJson (`https://api.rajaongkir.com/starter/province?id=${q}&key=89793de22a0ba66f15742c6e88ea07ae`)
+a = `${t.rajaongkir.results.province}`
+b = `${t.rajaongkir.results.city_name}`
+c = `${t.rajaongkir.results.type}`
+d = `${t.rajaongkir.results.postal_code}`
+e = `${t.rajaongkir.results.province_id}`
+f = `${t.rajaongkir.results.city_id}`
+m.reply(`
+Data di temukan\n\n• kota id : ${f}\n• kota : ${b}\n• gelar type : ${c}\n• provinsi id : ${e}\n• provinsi : ${a}\nkode pos : ${d}`)
 break
           case 'sakit':
           reply('Semoga lekas sembuh ka🥺')
