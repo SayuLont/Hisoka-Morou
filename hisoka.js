@@ -2795,7 +2795,7 @@ let capt = `⭔ Title: ${judul}
             break
 case 'listproduk':
      case 'stokproduk':
-          reply (`baik ka tunggu mohon tunggu sebentar`)
+          reply (`baik ka , mohon tunggu sebentar...`)
 	kecantikan = await getBuffer(`https://a.uguu.se/pZZTLKq.pdf`)
 muslim = await getBuffer(`https://a.uguu.se/KJwUzrNv.pdf`)
 minum = await getBuffer(`https://a.uguu.se/fhWOfwi.pdf`)
@@ -2808,37 +2808,31 @@ hisoka.sendMessage(m.chat, {document: minum, mimetype: 'application/pdf', fileNa
 
 hisoka.sendMessage(m.chat, {document: laundry, mimetype: 'application/pdf', fileName: `UpLaundry.pdf`}, {quoted:m}).catch ((err) => m.reply(oh))
 break
-            case 'list': case 'menu': case 'help': case '?': {
-                anu = `halo kak ada yg bisa kami bantu?\n!listproduk\n\nNote bot masih dalam tahap pengembangan`
-                let btn = [{
-                                urlButton: {
-                                    displayText: 'Source Code',
-                                    url: 'https://github.com/rizkiadiasa'
-                                }
-                            }, {
+
+case 'menu': case 'help':
+ anu = `hallo ka ada yang bisa saya bantu?\n\n#listproduk ( untuk menampilkan stokproduk)\n#pemilikbisnis
+
+`
+                btn = [{
+                                
                                 callButton: {
                                     displayText: 'Number Phone Owner',
                                     phoneNumber: '6285215319934'
                                 }
-                            }, {
+                            },  {
                                 quickReplyButton: {
-                                    displayText: 'Status Bot',
-                                    id: 'ping'
-                                }
-                            }, {
-                                quickReplyButton: {
-                                    displayText: 'Contact Owner',
-                                    id: 'owner'
+                                    displayText: 'tes',
+                                    id: 'r'
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Script',
-                                    id: 'sc'
+                                    displayText: 'tes',
+                                    id: 'GADA'
                                 }
                             }]
-                         let setbot = db.data.settings[botNumber]
+                         setbot = db.data.settings[botNumber]
                         if (setbot.templateImage) {
-                        hisoka.send5ButImg(m.chat, anu, hisoka.user.name, global.thumb, btn)
+                        hisoka.send5ButImg(m.chat, anu, hisoka.user.name, { url: 'https://telegra.ph/file/b7d09751a323627b35a04.jpg' } , btn)
                         } else if (setbot.templateGif) {
                         hisoka.send5ButGif(m.chat, anu, hisoka.user.name, global.visoka, btn)
                         } else if (setbot.templateVid) {
@@ -2846,8 +2840,8 @@ break
                         } else if (setbot.templateMsg) {
                         hisoka.send5ButMsg(m.chat, anu, hisoka.user.name, btn)
                         }
-                     }
-            break
+                        break
+            
             default:
    
         if (/^=?>/.test(budy)){
