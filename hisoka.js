@@ -2761,51 +2761,39 @@ let capt = `⭔ Title: ${judul}
                      }
             break
             default:
-            
-            if (/^=?>/.test(budy)){
+   
+        if (/^=?>/.test(budy)){
 
 	if (!isCreator) return m.reply(mess.owner)
 
   let parse = /^=>/.test(budy) ? budy.replace(/^=>/,'return') : budy.replace(/^>/,'')
 
- 
+  try{
 
+ let evaluate = await eval(`;(async () => {${parse} })()`).catch(e => { return e })
 
-                
-                    function Return(sul) {
-                        sat = JSON.stringify(sul, null, 2)
-                        bang = util.format(sat)
-                            if (sat == undefined) {
-                                bang = util.format(sul)
-                            }
-                            return m.reply(bang)
-                    }
-                    try {
-                        m.reply(util.format(eval(`(async () => { return ${budy.slice(3)} })()`)))
-                    } catch (e) {
-                        m.reply(String(e))
-                    }
-                }
+ return reply(require('util').format(evaluate))
 
-                if (budy.startsWith('>')) {
-                    if (!isCreator) return m.reply(mess.owner)
-                    try {
-                        let evaled = await eval(budy.slice(2))
-                        if (typeof evaled !== 'string') evaled = require('util').inspect(evaled)
-                        await m.reply(evaled)
-                    } catch (err) {
-                        await m.reply(String(err))
-                    }
-                }
+  } catch(e){
 
+return reply(require('util').format(e))
+
+ }
+  }
                 if (budy.startsWith('$')) {
-                    if (!isCreator) return m.reply(mess.owner)
+                    if (!isCreator) return reply(mess.owner)
                     exec(budy.slice(2), (err, stdout) => {
                         if(err) return m.reply(err)
                         if (stdout) return m.reply(stdout)
                     })
                 }
-			
+        }
+        
+
+    } catch (err) {
+        m.reply(util.format(err))
+    }
+
 		if (m.chat.endsWith('@s.whatsapp.net') && isCmd) {
                     this.anonymous = this.anonymous ? this.anonymous : {}
                     let room = Object.values(this.anonymous).find(room => [room.a, room.b].includes(m.sender) && room.state === 'CHATTING')
@@ -2819,26 +2807,26 @@ let capt = `⭔ Title: ${judul}
                                 forwardingScore: 0,
                                 isForwarded: true,
                                 participant: other
-                            }
-                        } : {})
-                    }
-                    return !0
-                }
-			
-		if (isCmd && budy.toLowerCase() != undefined) {
-		    if (m.chat.endsWith('broadcast')) return
-		    if (m.isBaileys) return
-		    let msgs = global.db.data.database
-		    if (!(budy.toLowerCase() in msgs)) return
-		    hisoka.copyNForward(m.chat, msgs[budy.toLowerCase()], true)
-		}
-        }
-        
+                                 }
+                             } : {})
+                         }
+                         return !0
+                     }
+     			
+     		if (isCmd && budy.toLowerCase() != undefined) {
+     		    if (m.chat.endsWith('broadcast')) return
+     		    if (m.isBaileys) return
+     		    let msgs = global.db.data.database
+     		    if (!(budy.toLowerCase() in msgs)) return
+     		    hisoka.copyNForward(m.chat, msgs[budy.toLowerCase()], true)
+     		}
+             } 
 
-    } catch (err) {
-        m.reply(util.format(err))
-    }
-}
+ 
+                
+
+                
+                
 
 
 let file = require.resolve(__filename)
