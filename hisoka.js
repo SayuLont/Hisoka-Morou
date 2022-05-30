@@ -2775,6 +2775,7 @@ Jika anda ingin melihat layanan yang kami tawarkan bisa pakai menu ini\n
                           hisoka.sendContact(m.chat, global.pemilikbisnis, m)
           
                       }
+                      break
                       case 'playstore': {
                       if (!text) throw `Example : ${prefix + command} clash of clans`
                       let res = await fetchJson(api('zenz', '/webzone/playstore', { query: text }, 'apikey'))
@@ -2787,7 +2788,7 @@ Jika anda ingin melihat layanan yang kami tawarkan bisa pakai menu ini\n
                       }
                       m.reply(teks)
                       }
-                      break
+                      
                       break
                       case 'gsmarena': {
                       if (!text) throw `Example : ${prefix + command} samsung`
