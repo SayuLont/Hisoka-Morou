@@ -281,7 +281,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
  semdertag.push(con.split(' ')[0]+'@s.whatsapp.net')
   }
   hisoka.sendMessage(m.chat, {text:teks},  {
- quoted: m, thumbnail: fs.readFileSync('./setting/hisoka.jpg'), contextInfo: {
+ quoted: m, thumbnail: fs.readFileSync('./lib/hisoka.jpg'), contextInfo: {
 mentionedJid: semdertag }});
 }
         //TicTacToe
@@ -2733,7 +2733,7 @@ let capt = `⭔ Title: ${judul}
             }
             break
             case 'list': case 'menu': case 'help': case '?': {
-                anu = ` [ MAINTENANCE ]\n#MASIH DALAM TAHAP PENGEMBANGAN`
+                anu = ` [ MAINTENANCE ]\n\n#MASIH DALAM TAHAP PENGEMBANGAN`
                 let btn = [{
                                 urlButton: {
                                     displayText: 'Source Code',
