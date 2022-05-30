@@ -521,7 +521,7 @@
 case 'menu':
 case 'help':
 anu = `
- Hi ${pushname} aku J - Bot  ada yg bisa di bantu?
+ Hi ${pushname} aku J GROUP  ada yg bisa di bantu?
  
 
 *J - MENU*
@@ -575,7 +575,7 @@ anu = `
 # > / =>
 
 `
-                 message = await prepareWAMessageMedia({ image: global.thumb , }, { upload: hisoka.waUploadToServer })
+                 message = await prepareWAMessageMedia({ image: { url : "https://telegra.ph/file/f4f4ef5fdb64d2ca75af2.jpg" }, }, { upload: hisoka.waUploadToServer })
                  template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                     templateMessage: {
                         hydratedTemplate: {
