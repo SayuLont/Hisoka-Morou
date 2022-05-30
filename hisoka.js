@@ -672,13 +672,13 @@ m.reply(`
 Data ditemukan\n\n• provinsi id : ${e}\n• provinsi : ${a}`)
 break
 case 'idkota': case 'kotaid': case 'kotaid':
- t = await fetchJson (`https://api.rajaongkir.com/starter/province?id=${q}&key=89793de22a0ba66f15742c6e88ea07ae`)
-a = `${t.rajaongkir.results.province}`
-b = `${t.rajaongkir.results.city_name}`
-c = `${t.rajaongkir.results.type}`
-d = `${t.rajaongkir.results.postal_code}`
-e = `${t.rajaongkir.results.province_id}`
-f = `${t.rajaongkir.results.city_id}`
+ z = await fetchJson (`https://api.rajaongkir.com/starter/city?id=${q}&key=89793de22a0ba66f15742c6e88ea07ae`)
+a = `${z.rajaongkir.results.province}`
+b = `${z.rajaongkir.results.city_name}`
+c = `${z.rajaongkir.results.type}`
+d = `${z.rajaongkir.results.postal_code}`
+e = `${z.rajaongkir.results.province_id}`
+f = `${z.rajaongkir.results.city_id}`
 m.reply(`
 Data di temukan\n\n• kota id : ${f}\n• kota : ${b}\n• gelar type : ${c}\n• provinsi id : ${e}\n• provinsi : ${a}\nkode pos : ${d}`)
 break
