@@ -560,6 +560,7 @@ case 'absen':
                         hisoka.send5ButMsg(m.chat, anu, hisoka.user.name, btn)
                         }
                         break
+
 case 'izin':
 jawab = `Izin kenapa ka ${pushname} ?`
             let buttons = [
@@ -2792,8 +2793,22 @@ let capt = `⭔ Title: ${judul}
                 }
             }
             break
+case 'listproduk':
+     case 'stokproduk':
+	kecantikan = await getBuffer(`https://a.uguu.se/pZZTLKq.pdf`)
+muslim = await getBuffer(`https://a.uguu.se/KJwUzrNv.pdf`)
+minum = await getBuffer(`https://a.uguu.se/fhWOfwi.pdf`)
+laundry = await getBuffer(`https://a.uguu.se/VVcEOAt.pdf`)
+		hisoka.sendMessage(m.chat, {document: kecantikan, mimetype: 'application/pdf', fileName: `Kecantikan.pdf`}, {quoted:m}).catch ((err) => m.reply(oh))
+
+hisoka.sendMessage(m.chat, {document: muslim, mimetype: 'application/pdf', fileName: `Muslim.pdf`}, {quoted:m}).catch ((err) => m.reply(oh))
+
+hisoka.sendMessage(m.chat, {document: minum, mimetype: 'application/pdf', fileName: `Minuman.pdf`}, {quoted:m}).catch ((err) => m.reply(oh))
+
+hisoka.sendMessage(m.chat, {document: laundry, mimetype: 'application/pdf', fileName: `UpLaundry.pdf`}, {quoted:m}).catch ((err) => m.reply(oh))
+break
             case 'list': case 'menu': case 'help': case '?': {
-                anu = ` [ MAINTENANCE ]\n\n#MASIH DALAM TAHAP PENGEMBANGAN`
+                anu = `!listproduk\n!absen\n\nNote bot masih dalam tahap pengembangan`
                 let btn = [{
                                 urlButton: {
                                     displayText: 'Source Code',
