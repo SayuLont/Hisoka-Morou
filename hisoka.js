@@ -559,7 +559,7 @@ anu = `
 
  *Random Menu*
 
-#Blom Di Isi
+#blom Di Isi
  
  *Other Menu*
  
@@ -575,7 +575,7 @@ anu = `
 # > / =>
 
 `
-                 message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/hisoka.jpg') , jpegThumbnail: fs.readFileSync('./lib/hisoka.jpg') }, { upload: hisoka.waUploadToServer })
+                 message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/jen.jpg') , jpegThumbnail: fs.readFileSync('./lib/jen.jpg') }, { upload: hisoka.waUploadToServer })
                  template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                     templateMessage: {
                         hydratedTemplate: {
