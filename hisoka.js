@@ -669,7 +669,7 @@ d = `${t.rajaongkir.results.postal_code}`
 e = `${t.rajaongkir.results.province_id}`
 f = `${t.rajaongkir.results.city_id}`
 m.reply(`
-• provinsi id : ${e}\n• provinsi : ${a}`)
+Data ditemukan\n\n• provinsi id : ${e}\n• provinsi : ${a}`)
 break
 case 'idkota': case 'kotaid': case 'kotaid':
  t = await fetchJson (`https://api.rajaongkir.com/starter/province?id=${q}&key=89793de22a0ba66f15742c6e88ea07ae`)
