@@ -575,7 +575,7 @@ anu = `
 # > / =>
 
 `
-                 message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/jen.jpg') , jpegThumbnail: fs.readFileSync('./lib/jen.jpg') }, { upload: hisoka.waUploadToServer })
+                 message = await prepareWAMessageMedia({ image: global.thumb , }, { upload: hisoka.waUploadToServer })
                  template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                     templateMessage: {
                         hydratedTemplate: {
