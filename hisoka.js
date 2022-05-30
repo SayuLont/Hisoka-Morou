@@ -521,12 +521,42 @@
 case 'menu':
 case 'help':
 anu = `
- Hi ${pushname} aku J GROUP  ada yg bisa di bantu?
+ Hi kak ${pushname} aku Jebot, Bot J group. ada yg bisa aku di bantu?
  
 
 *J - MENU*
 
-#listproduk
+*J Group Layanan*
+Jika anda ingin melihat layanan yang kami tawarkan bisa pakai menu ini\n
+#produk
+#promo
+
+*J Group Kerjasama*
+#kerjasama dropship
+#Kerjasama bagihasil
+#hubungi admin J Group
+
+*Franchise Ice Motivasi*
+#absen teras
+#hubungi admin Franchise
+
+*Franchise J Food*
+#hubungi admin Franchise
+
+*J Food Agen*
+#produk
+#hubungi admin Agen
+
+*Jhee Production (seputaran t-shirt)*
+#produk
+#hubungi admin Jhee Production
+
+*Hijabku (seputaran hijab)*
+#produk
+#hubungi admin Hijabku
+
+*Jeje Arisan*
+#hubungi admin Jeje Arisan
 
  *Simple Menu*
  
