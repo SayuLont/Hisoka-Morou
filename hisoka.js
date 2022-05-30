@@ -531,7 +531,7 @@ anu = `
 *J Group Layanan*
 
 Jika anda ingin melihat layanan yang kami tawarkan bisa pakai menu ini\n
-#produk
+#listproduk
 #promo
 
 *J Group Kerjasama*
@@ -568,6 +568,9 @@ Jika anda ingin melihat layanan yang kami tawarkan bisa pakai menu ini\n
 
 #hubungi admin Jeje Arisan
 
+*Menu Layanan*
+
+#cekid [1-34 provinsi]
  *Simple Menu*
  
 #sticker
@@ -616,7 +619,7 @@ Jika anda ingin melihat layanan yang kami tawarkan bisa pakai menu ini\n
 # > / =>
 
 `
-                 message = await prepareWAMessageMedia({ image: { url : "https://telegra.ph/file/f4f4ef5fdb64d2ca75af2.jpg" }, }, { upload: hisoka.waUploadToServer })
+                 message = await prepareWAMessageMedia({ image: { url : "https://telegra.ph/file/7047f01cd9e33f5a2540b.jpg" }, }, { upload: hisoka.waUploadToServer })
                  template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                     templateMessage: {
                         hydratedTemplate: {
