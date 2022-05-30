@@ -590,6 +590,7 @@ Jika anda ingin melihat layanan yang kami tawarkan bisa pakai menu ini\n
 
  *Search Menu*
  
+#google
 #pinterest
 #translate
 #wallpaper
@@ -597,7 +598,7 @@ Jika anda ingin melihat layanan yang kami tawarkan bisa pakai menu ini\n
 
  *Random Menu*
 
-#blom Di Isi
+#couple
  
  *Other Menu*
  
@@ -2786,6 +2787,7 @@ Jika anda ingin melihat layanan yang kami tawarkan bisa pakai menu ini\n
                       }
                       m.reply(teks)
                       }
+                      break
                       break
                       case 'gsmarena': {
                       if (!text) throw `Example : ${prefix + command} samsung`
