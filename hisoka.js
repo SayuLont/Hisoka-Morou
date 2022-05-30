@@ -518,6 +518,99 @@
                       }
                       }
                       break
+case 'menu':
+case 'help':
+anu = `
+ Hi ${pushname} aku J - Bot  ada yg bisa di bantu?
+ 
+
+*J - MENU*
+
+#listproduk
+
+ *Simple Menu*
+ 
+#sticker
+#toimg
+#tomp4
+#togif
+#tourl
+
+ *Download Menu*
+ 
+#tiktok
+#play [ judul/link yt ]
+
+ *Group Menu*
+ 
+#linkgroup
+#grup [ close/open ]
+#setname
+#setpp
+#kick
+#tagall
+
+ *Search Menu*
+ 
+#pinterest
+#translate
+#wallpaper
+#wikimedia
+
+ *Random Menu*
+
+#Blom Di Isi
+ 
+ *Other Menu*
+ 
+#shutdown
+#restart
+#ping
+#owner
+#menu / #help / #?
+
+
+ *Owner Menu*
+ 
+# > / =>
+
+`
+                 message = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/hisoka.jpg') , jpegThumbnail: fs.readFileSync('./lib/hisoka.jpg') }, { upload: hisoka.waUploadToServer })
+                 template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+                    templateMessage: {
+                        hydratedTemplate: {
+                            imageMessage: message.imageMessage,
+                            hydratedContentText: anu,
+                            hydratedButtons: [{
+                                urlButton: {
+                                    displayText: 'Source Code',
+                                    url: 'https://github.com/IkyOgiwara/IkyOgiwara'
+                                }
+                            }, {
+                                callButton: {
+                                    displayText: 'Number Phone Owner',
+                                    phoneNumber: '+62 852-1531-9934'
+                                }
+                            }, {
+                                quickReplyButton: {
+                                    displayText: 'Status Bot',
+                                    id: 'ping'
+                                }
+                            }, {
+                                quickReplyButton: {
+                                    displayText: 'Contact Owner',
+                                    id: 'owner'
+                                }  
+                            }, {
+                                quickReplyButton: {
+                                    displayText: 'Script',
+                                    id: 'sc'
+                                }
+                            }]
+                        }
+                    }
+                }), { userJid: m.chat, quoted: m })
+                hisoka.relayMessage(m.chat, template.message, { messageId: template.key.id })
           case 'sakit':
           reply('Semoga lekas sembuh ka🥺')
           break
