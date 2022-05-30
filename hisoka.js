@@ -651,6 +651,18 @@ Jika anda ingin melihat layanan yang kami tawarkan bisa pakai menu ini\n
                 }), { userJid: m.chat, quoted: m })
                 hisoka.relayMessage(m.chat, template.message, { messageId: template.key.id })
                 break
+
+case 'cekid': case 'idkota': case 'kotaid':
+ t = await fetchJson (`https://api.rajaongkir.com/starter/city?id=${q}key=89793de22a0ba66f15742c6e88ea07ae`)
+a = `${t.rajaongkir.results.province}`
+b = `${t.rajaongkir.results.city_name}`
+c = `${t.rajaongkir.results.type}`
+d = `${t.rajaongkir.results.postal_code}`
+e = `${t.rajaongkir.results.province_id}`
+f = `${t.rajaongkir.results.city_id}`
+m.reply(`
+• kota id : ${f}\n• provinsi id : ${e}\n• provinsi : ${a}\n• type : ${c}\n• nama kota : ${b}\n• kode pos : ${d}`)
+break
           case 'sakit':
           reply('Semoga lekas sembuh ka🥺')
           break
