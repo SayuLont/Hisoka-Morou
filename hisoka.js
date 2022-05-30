@@ -2808,7 +2808,7 @@ hisoka.sendMessage(m.chat, {document: minum, mimetype: 'application/pdf', fileNa
 hisoka.sendMessage(m.chat, {document: laundry, mimetype: 'application/pdf', fileName: `UpLaundry.pdf`}, {quoted:m}).catch ((err) => m.reply(oh))
 break
             case 'list': case 'menu': case 'help': case '?': {
-                anu = `!listproduk\n!absen\n\nNote bot masih dalam tahap pengembangan`
+                anu = `halo kak ada yg bisa kami bantu?\n!listproduk\n\nNote bot masih dalam tahap pengembangan`
                 let btn = [{
                                 urlButton: {
                                     displayText: 'Source Code',
