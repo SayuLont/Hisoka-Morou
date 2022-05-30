@@ -272,6 +272,18 @@ ${Array.from(room.jawaban, (jawaban, index) => {
             } else m.reply('*Jawaban Salah!*')
         }
         
+        const reply = (teks) => {
+
+  var ids = teks.includes('@') ? teks.split('@'): []
+
+  let semdertag = []
+  for (var con of ids) {
+ semdertag.push(con.split(' ')[0]+'@s.whatsapp.net')
+  }
+  hisoka.sendMessage(m.chat, {text:teks},  {
+ quoted: m, thumbnail: fs.readFileSync('./setting/hisoka.jpg'), contextInfo: {
+mentionedJid: semdertag }});
+}
         //TicTacToe
 	    this.game = this.game ? this.game : {}
 	    let room = Object.values(this.game).find(room => room.id && room.game && room.state && room.id.startsWith('tictactoe') && [room.game.playerX, room.game.playerO].includes(m.sender) && room.state == 'PLAYING')
