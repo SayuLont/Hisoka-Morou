@@ -520,6 +520,13 @@
                       }
                       }
                       break
+case "bisnisinfo": case "infobisnis"
+
+reply("baik ka , berikut ini sedikit info tentang kami\n\n• Frenchise J Food\n•J Food Agen\n• Jhee Production ( seputaran t-shirt)\n• Hijabku\n• Jeje Arisan\n\nMau tanya info lebih lanjut bisa langsung hubungi admin kami ya , dengan cara balas kontakadmin atau tekan tombol di bawah terimakasih🥰")
+break
+
+
+
 case 'menu':
 case 'help':
 anu = `
