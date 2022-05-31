@@ -557,11 +557,11 @@ anu = `
  Hi kak ${pushname} aku Jebot, Bot J group. ada yg bisa aku di bantu?
  
 
-*J - MENU*
 
 *J Group Layanan*
 
 Jika anda ingin melihat layanan yang kami tawarkan bisa pakai menu ini\n
+#infobisnis
 #listproduk
 #promo
 
@@ -576,46 +576,11 @@ Jika anda ingin melihat layanan yang kami tawarkan bisa pakai menu ini\n
 #absen teras
 #hubungi admin Franchise
 
-*Franchise J Food*
-
-#hubungi admin Franchise
-
-*J Food Agen*
-
-#produk
-#hubungi admin Agen
-
-*Jhee Production (seputaran t-shirt)*
-
-#produk
-#hubungi admin Jhee Production
-
-*Hijabku (seputaran hijab)*
-
-#produk
-#hubungi admin Hijabku
-
-*Jeje Arisan*
-
-#hubungi admin Jeje Arisan
-
 *Menu Layanan*
 
 #cekid [1-34 provinsi]
- *Simple Menu*
  
-#sticker
-#toimg
-#tomp4
-#togif
-#tourl
-
- *Download Menu*
- 
-#tiktok
-#play [ judul/link yt ]
-
- *Group Menu*
+*Group Menu*
  
 #linkgroup
 #grup [ close/open ]
@@ -624,30 +589,9 @@ Jika anda ingin melihat layanan yang kami tawarkan bisa pakai menu ini\n
 #kick
 #tagall
 
- *Search Menu*
- 
-#google
-#pinterest
-#translate
-#wallpaper
-#wikimedia
+*Kontak admin*
 
- *Random Menu*
-
-#couple
- 
- *Other Menu*
- 
-#shutdown
-#restart
-#ping
-#owner
-#menu / #help / #?
-
-
- *Owner Menu*
- 
-# > / =>
+#kontakadmin
 
 `
                  message = await prepareWAMessageMedia({ image: { url : "https://telegra.ph/file/7047f01cd9e33f5a2540b.jpg" }, }, { upload: hisoka.waUploadToServer })
