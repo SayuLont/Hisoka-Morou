@@ -574,7 +574,6 @@ Jika anda ingin melihat layanan yang kami tawarkan bisa pakai menu ini\n
 *Franchise Ice Motivasi*
 
 #absen teras
-#hubungi admin Franchise
 
 *Menu Layanan*
 
@@ -602,8 +601,8 @@ Jika anda ingin melihat layanan yang kami tawarkan bisa pakai menu ini\n
                             hydratedContentText: anu,
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'Source Code',
-                                    url: 'https://github.com/IkyOgiwara/IkyOgiwara'
+                                    displayText: 'Website',
+                                    url: 'blom ads''
                                 }
                             }, {
                                 callButton: {
@@ -612,8 +611,8 @@ Jika anda ingin melihat layanan yang kami tawarkan bisa pakai menu ini\n
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Status Bot',
-                                    id: 'ping'
+                                    displayText: 'Layanan Lain',
+                                    id: 'infobisnis'
                                 }
                             }, {
                                 quickReplyButton: {
