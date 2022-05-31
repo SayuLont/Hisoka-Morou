@@ -602,7 +602,7 @@ Jika anda ingin melihat layanan yang kami tawarkan bisa pakai menu ini\n
                             hydratedButtons: [{
                                 urlButton: {
                                     displayText: 'Website',
-                                    url: 'blom ads''
+                                    url: 'blom ads'
                                 }
                             }, {
                                 callButton: {
