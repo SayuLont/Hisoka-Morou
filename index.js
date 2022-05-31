@@ -1,5 +1,3 @@
-
-
 require('./config')
 const { default: hisokaConnect, useSingleFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto } = require("@adiwajshing/baileys")
 const { state, saveState } = useSingleFileAuthState(`./${sessionName}.json`)
@@ -67,7 +65,7 @@ async function startHisoka() {
     const hisoka = hisokaConnect({
         logger: pino({ level: 'silent' }),
         printQRInTerminal: true,
-        browser: ['Ikyii Bot','Safari','1.0.0'],
+        browser: ['Hisoka Multi Device','Safari','1.0.0'],
         auth: state
     })
 
@@ -123,6 +121,36 @@ async function startHisoka() {
      }
     })
 
+    hisoka.ev.on('group-participants.update', async (anu) => {
+        console.log(anu)
+        try {
+            let metadata = await hisoka.groupMetadata(anu.id)
+            let participants = anu.participants
+            for (let num of participants) {
+                // Get Profile Picture User
+                try {
+                    ppuser = await hisoka.profilePictureUrl(num, 'image')
+                } catch {
+                    ppuser = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
+                }
+
+                // Get Profile Picture Group
+                try {
+                    ppgroup = await hisoka.profilePictureUrl(anu.id, 'image')
+                } catch {
+                    ppgroup = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
+                }
+
+                if (anu.action == 'add') {
+                    hisoka.sendMessage(anu.id, { image: { url: ppuser }, contextInfo: { mentionedJid: [num] }, caption: `Welcome To ${metadata.subject} @${num.split("@")[0]}` })
+                } else if (anu.action == 'remove') {
+                    hisoka.sendMessage(anu.id, { image: { url: ppuser }, contextInfo: { mentionedJid: [num] }, caption: `@${num.split("@")[0]} Leaving To ${metadata.subject}` })
+                }
+            }
+        } catch (err) {
+            console.log(err)
+        }
+    })
 	
     // Setting
     hisoka.decodeJid = (jid) => {
@@ -163,7 +191,7 @@ async function startHisoka() {
 	for (let i of kon) {
 	    list.push({
 	    	displayName: await hisoka.getName(i + '@s.whatsapp.net'),
-	    	vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${await hisoka.getName(i + '@s.whatsapp.net')}\nFN:${await hisoka.getName(i + '@s.whatsapp.net')}\nEND:VCARD`
+	    	vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${await hisoka.getName(i + '@s.whatsapp.net')}\nFN:${await hisoka.getName(i + '@s.whatsapp.net')}\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:Ponsel\nitem2.EMAIL;type=INTERNET:ikysmurf02@gmail.com\nitem2.X-ABLabel:Email\nitem3.URL:https://instagram.com/ikiyyye\nitem3.X-ABLabel:Instagram\nitem4.ADR:;;Indonesia;;;;\nitem4.X-ABLabel:Region\nEND:VCARD`
 	    })
 	}
 	hisoka.sendMessage(jid, { contacts: { displayName: `${list.length} Kontak`, contacts: list }, ...opts }, { quoted })
@@ -250,6 +278,7 @@ async function startHisoka() {
       *@param [*] sections
       *@param {*} quoted
       */
+        hisoka.sendListMsg = (jid, text = '', footer = '', title = '' , butText = '', sects = [], quoted) => {
         hisoka.sendListMsg = (jid, text = '', footer = '', title = '' , butText = '', sects = [], quoted) => {
         let sections = sects
         var listMes = {
