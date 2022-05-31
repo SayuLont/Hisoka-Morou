@@ -2843,13 +2843,13 @@ break
                       break
 case 'adminfrenchise':
                {
-                          hisoka.sendContact(m.chat, global.pemilikbisnis, m)
+                          hisoka.sendContact(m.chat, global.frenchise, m)
           m.reply('Silahkan Hubungi Admin izdihar')
                       }
                       break
 case 'adminagen':
                {
-                          hisoka.sendContact(m.chat, global.pemilikbisnis, m)
+                          hisoka.sendContact(m.chat, global.agen, m)
           m.reply('Silahkan Hubungi Admin Novita')
                       }
                       break
