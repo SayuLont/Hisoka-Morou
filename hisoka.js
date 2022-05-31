@@ -540,7 +540,7 @@ case "kontakadmin": case "contac": case "contacus": case "hubungikami":
      break
      case 'promo':
           reply ("maap kak , saat ini kami blom menyediakan promo 😔")
-     
+     break
 case "bisnisinfo": case "infobisnis":
 
 butttons = [
