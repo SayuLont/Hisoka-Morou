@@ -530,7 +530,7 @@ case "kontakadmin": case "contac": case "contacus": case "hubungikami":
                           rows: [
                           {title: "Admin J Group", rowId: `Admin Arisan`, description: `Admin 1`},
                           {title: "Admin Frenchise", rowId: ` `, description: `Admin 2`},
-                          {title: "Admin Jeje", rowId: ` `, description: `Admin 3`},
+                          {title: "Admin Jeje", rowId: `pemilikbisnis`, description: `Admin 3`},
                           {title: "Admin Agen", rowId: `blm di isi`, description: `Admin 4`}
                           ]
                           },
@@ -542,11 +542,11 @@ case "kontakadmin": case "contac": case "contacus": case "hubungikami":
      
 case "bisnisinfo": case "infobisnis":
 
-var buttons = [
+butttons = [
                                   { buttonId: 'kontakadmin', buttonText: { displayText: 'Kontak Admin' }, type: 1 },
                                 
                               ]
-                              await hisoka.sendButtonText(m.chat, buttons, `baik ka , berikut ini sedikit info tentang kami\n\n• Frenchise J Food\n• J Food Agen\n• Jhee Production ( seputaran t-shirt)\n• Hijabku\n• Jeje Arisan\n\nMau tanya info lebih lanjut bisa langsung hubungi admin kami ya , dengan cara balas kontakadmin atau tekan tombol di bawah terimakasih.`, hisoka.user.name, )
+                              await hisoka.sendButtonText(m.chat, butttons, `baik ka , berikut ini sedikit info tentang kami\n\n• Frenchise J Food\n• J Food Agen\n• Jhee Production ( seputaran t-shirt)\n• Hijabku\n• Jeje Arisan\n\nMau tanya info lebih lanjut bisa langsung hubungi admin kami ya , dengan cara balas kontakadmin atau tekan tombol di bawah terimakasih.`, hisoka.user.name, )
 break
 
 
@@ -2835,7 +2835,7 @@ break
           case 'pemilikbisnis':
                {
                           hisoka.sendContact(m.chat, global.pemilikbisnis, m)
-          
+          m.reply('Silahkan Hubungi Admin Jeje')
                       }
                       break
                       case 'playstore': {
