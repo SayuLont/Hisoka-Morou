@@ -538,7 +538,8 @@ case "kontakadmin": case "contac": case "contacus": case "hubungikami":
                           hisoka.sendListMsg(m.chat, `Berikut list admin kami kak`, hisoka.user.name, `Hello  !`, `Click Here`, sections, )
      
      break
-     
+     case 'promo':
+          reply ("maap kak , saat ini kami blom menyediakan promo 😔")
      
 case "bisnisinfo": case "infobisnis":
 
