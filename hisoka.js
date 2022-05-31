@@ -520,6 +520,12 @@
                       }
                       }
                       break
+case "kontakadmin": case "contac": case "contacus": case "hubungikami":
+     reply(`silahkan hubungi admin kami kak\n\n#adminjeje\n#adminarisan\n#adminjgroup\n#adminfrenchise\n#adminagen,\n\nketik command di atas untuk menampilkan kontak admin`)
+     
+     break
+     
+     
 case "bisnisinfo": case "infobisnis":
 
  buttons = [
