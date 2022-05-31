@@ -521,7 +521,21 @@
                       }
                       break
 case "kontakadmin": case "contac": case "contacus": case "hubungikami":
-     reply(`silahkan hubungi admin kami kak\n\n#adminjeje\n#adminarisan\n#adminjgroup\n#adminfrenchise\n#adminagen,\n\nketik command di atas untuk menampilkan kontak admin`)
+     
+
+                          let sections = [
+
+                          {
+                          title: "Admin Jeje",
+                          rows: [
+                          {title: "Admin J Group", rowId: `Admin Arisan`, description: `Admin 1`},
+                          {title: "Admin Frenchise", rowId: ` `, description: `Admin 2`},
+                          {title: "Admin Jeje", rowId: ` `, description: `Admin 3`},
+                          {title: "Admin Agen", rowId: `blm di isi`, description: `Admin 4`}
+                          ]
+                          },
+                          ]
+                          hisoka.sendListMsg(m.chat, `Berikut list admin kami kak`, hisoka.user.name, `Hello  !`, `Click Here`, sections, )
      
      break
      
