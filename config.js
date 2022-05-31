@@ -16,6 +16,10 @@ global.APIKeys = {
 // Other
 
 global.owner = ['6285215319934']
+global.arisan ['6282181341508']
+global.jgroup = ['6282243616154']
+global.agen = ['6285794156479']
+global.frenchise = ['6285156182117']
 global.pemilikbisnis = ['6289696435508']
 global.premium = ['6285215319934']
 global.packname = 'ikyiii Ads'
