@@ -528,10 +528,10 @@ case "kontakadmin": case "contac": case "contacus": case "hubungikami":
                           {
                           title: "Admin Jeje",
                           rows: [
-                          {title: "Admin J Group", rowId: `Admin Arisan`, description: `Admin 1`},
-                          {title: "Admin Frenchise", rowId: ` `, description: `Admin 2`},
+                          {title: "Admin J Group", rowId: `adminjgroup`, description: `Admin 1`},
+                          {title: "Admin Frenchise", rowId: `adminfrenchise`, description: `Admin 2`},
                           {title: "Admin Jeje", rowId: `pemilikbisnis`, description: `Admin 3`},
-                          {title: "Admin Agen", rowId: `blm di isi`, description: `Admin 4`}
+                          {title: "adminagen", rowId: `adminagen`, description: `Admin 4`},{title: "Admin Arisan", rowId: `adminarisan`, description: `Admin 5`}
                           ]
                           },
                           ]
@@ -2832,10 +2832,37 @@ break
           
                       }
                       break
+          
           case 'pemilikbisnis':
+
                {
+
                           hisoka.sendContact(m.chat, global.pemilikbisnis, m)
           m.reply('Silahkan Hubungi Admin Jeje')
+                      }
+                      break
+case 'adminfrenchise':
+               {
+                          hisoka.sendContact(m.chat, global.pemilikbisnis, m)
+          m.reply('Silahkan Hubungi Admin izdihar')
+                      }
+                      break
+case 'adminagen':
+               {
+                          hisoka.sendContact(m.chat, global.pemilikbisnis, m)
+          m.reply('Silahkan Hubungi Admin Novita')
+                      }
+                      break
+case 'adminjgroup':
+               {
+                          hisoka.sendContact(m.chat, global.adminjgroup, m)
+          m.reply('Silahkan Hubungi Admin Riska')
+                      }
+                      break
+case 'adminarisan':
+               {
+                          hisoka.sendContact(m.chat, global.arisan, m)
+          m.reply('Silahkan Hubungi Admin Ari Yanti ')
                       }
                       break
                       case 'playstore': {
