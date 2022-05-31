@@ -531,7 +531,7 @@ case "kontakadmin": case "contac": case "contacus": case "hubungikami":
                           {title: "Admin J Group", rowId: `adminjgroup`, description: `Admin 1`},
                           {title: "Admin Frenchise", rowId: `adminfrenchise`, description: `Admin 2`},
                           {title: "Admin Jeje", rowId: `pemilikbisnis`, description: `Admin 3`},
-                          {title: "adminagen", rowId: `adminagen`, description: `Admin 4`},{title: "Admin Arisan", rowId: `adminarisan`, description: `Admin 5`}
+                          {title: "Admi agen", rowId: `adminagen`, description: `Admin 4`},{title: "Admin Arisan", rowId: `adminarisan`, description: `Admin 5`}
                           ]
                           },
                           ]
