@@ -542,7 +542,7 @@ case "kontakadmin": case "contac": case "contacus": case "hubungikami":
      
 case "bisnisinfo": case "infobisnis":
 
- buttons = [
+var buttons = [
                                   { buttonId: 'kontakadmin', buttonText: { displayText: 'Kontak Admin' }, type: 1 },
                                 
                               ]
