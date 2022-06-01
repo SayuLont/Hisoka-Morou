@@ -555,8 +555,8 @@ break
 case 'menu':
 case 'help':
 anu = `
- Hi kak ${pushname} aku Jebot, Bot J group. ada yg bisa aku di bantu?
- 
+ Hallo ${pushname} ..... Aku Jebot, Bot J Group.
+Ada yang bisa kami bantu?
 
 
 *J Group Layanan*
