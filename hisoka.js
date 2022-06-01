@@ -559,39 +559,25 @@ anu = `
 Ada yang bisa kami bantu?
 
 
-*J Group Layanan*
+J Group Layanan
 
-Jika anda ingin melihat layanan yang kami tawarkan bisa pakai menu ini\n
-#infobisnis
-#listproduk
-#promo
 
-*J Group Kerjasama*
 
-#kerjasama dropship
-#Kerjasama bagihasil
-#hubungi admin J Group
+Bergabunglah dengan J Group!
+Jadilah bagian dari keluarga besar J Group. Bertumbuh bersama memajukan Usaha di Indonesia.
 
-*Franchise Ice Motivasi*
+Jika Anda ingin melihat layanan yang kami tawarkan silakan pakai menu ini
+#listusaha
+#infodropship
+#infoagen
+#infokerjasama
+#listlayanan
+J Group juga menjual berbagai paket usaha & konsultasi usaha secara gratis. Jika Anda ingin melihat paket usaha yang kami tawarkan silakan pakai menu ini
+!listproduk
+!konsultasi
 
-#absen teras
 
-*Menu Layanan*
 
-#cekid [1-34 provinsi]
- 
-*Group Menu*
- 
-#linkgroup
-#grup [ close/open ]
-#setname
-#setpp
-#kick
-#tagall
-
-*Kontak admin*
-
-#kontakadmin
 
 `
                  message = await prepareWAMessageMedia({ image: { url : "https://telegra.ph/file/7047f01cd9e33f5a2540b.jpg" }, }, { upload: hisoka.waUploadToServer })
@@ -603,12 +589,12 @@ Jika anda ingin melihat layanan yang kami tawarkan bisa pakai menu ini\n
                             hydratedButtons: [{
                                 urlButton: {
                                     displayText: 'Website',
-                                    url: 'blom ads'
+                                    url: 'http://Www.josplan.com'
                                 }
                             }, {
                                 callButton: {
-                                    displayText: 'Number Phone Owner',
-                                    phoneNumber: '+62 852-1531-9934'
+                                    displayText: 'Admin Phone Owner',
+                                    phoneNumber: '089696435508'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -622,8 +608,8 @@ Jika anda ingin melihat layanan yang kami tawarkan bisa pakai menu ini\n
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Script',
-                                    id: 'sc'
+                                    displayText: 'Tentang',
+                                    id: 'tentang'
                                 }
                             }]
                         }
@@ -632,6 +618,72 @@ Jika anda ingin melihat layanan yang kami tawarkan bisa pakai menu ini\n
                 hisoka.relayMessage(m.chat, template.message, { messageId: template.key.id })
                 break
 
+case 'tentang':
+   reply(' J Group adalah Induk usaha yang dikelola oleh Jenever Kaligis. J Group terdiri dari lima usaha utama yaitu usaha Makanan & minuman, usaha tekstil, usaha pertanian, usaha kecantikan dan usaha campuran.')
+break
+
+case "listusaha":
+
+reply(`*LIST USAHA*
+
+*Layanan Makanan & Minuman*
+
+Ice Motivasi
+Spesialisasi Franchise minuman olahan
+
+J Food
+Spesialisasi Franchise makanan olahan
+
+Cemilan Jowo
+Spesialisasi penjualan makanan olahan khas Pulau Jawa
+
+Mpek2ku
+Spesialisasi penjualan makanan olahan khas Daerah Palembang
+
+Two Kopiku
+Spesialisasi penjualan minuman olahan khusus seputaran kopi`)
+
+break
+
+case "layananpakaian":
+     
+reply(`*Layanan Pakaian*
+
+Jhee Production
+Spesialisasi produksi & penjualan T-shirt Distro dengan harga terjangkau
+
+Jilbabku
+Spesialisasi produksi & penjualan Jilbab dengan harga terjangkau`)
+
+break
+
+case "layananpertanian":
+     
+reply (`*Layanan Pertanian*
+Jen Sentosa Karya
+Spesialisasi produksi & penjualan seputaran pertanian dengan harga terjangkau`)
+
+break
+case "layanankecantikan":
+     
+reply(`*Layanan Kecantikan*
+JN Studio
+Spesialisasi layanan perawatan kulit di Klinik studio dengan harga terjangkau
+
+Jani Glow Up
+Spesialisasi layanan perawatan kulit di rumah konsumen dengan harga terjangkau
+
+Jen Salon & Beauty
+Spesialisasi layanan perawatan Rambut dengan harga terjangkau`)
+
+case "layananlainnya":
+     
+reply(`*Layanan Lainnya*
+
+Jen Ever Gift
+Spesialisasi produksi & penjualan seputar hampers, buket & hantaran dengan harga terjangkau`)
+
+break
 
 case 'cekidprov': case 'idprovinsi': case 'provinsiid':
 
