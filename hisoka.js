@@ -3034,17 +3034,43 @@ case 'adminarisan':
                       }
                       break
           case 'listproduk':
-               case 'stokproduk':
-                    reply (`baik ka , mohon tunggu sebentar...`)
+
+                          let seeections = [
+
+                          {
+                          title: "  ",
+                          rows: [
+                          {title: "Laundry ", rowId: `produklaundry`, description: ` `},
+                          {title: "Muslimah", rowId: `produkmuslim`, description: ` `},
+                          {title: "Minuman", rowId: `produkminum`, description: ` `},
+                          {title: "Kecantikan", rowId: `produkecantikan`, description: ``}
+                          ]
+                          },
+                          ]
+                          hisoka.sendListMsg(m.chat, `Berikut list produk`, hisoka.user.name, `Hello  !`, `Click Here`, seeections, )
+break
+                    case "produkecantikan":
+                         
           	kecantikan = await getBuffer(`https://a.uguu.se/pZZTLKq.pdf`)
+hisoka.sendMessage(m.chat, {document: kecantikan, mimetype: 'application/pdf', fileName: `Kecantikan.pdf`}, {quoted:m}).catch ((err) => m.reply(oh))
+          	break
+case "produkmuslim":
           muslim = await getBuffer(`https://a.uguu.se/KJwUzrNv.pdf`)
+hisoka.sendMessage(m.chat, {document: muslim, mimetype: 'application/pdf', fileName: `Muslim.pdf`}, {quoted:m}).catch ((err) => m.reply(oh))
+          
+          break
+case "produkminum":
+     
           minum = await getBuffer(`https://a.uguu.se/fhWOfwi.pdf`)
-          laundry = await getBuffer(`https://a.uguu.se/VVcEOAt.pdf`)
-          		hisoka.sendMessage(m.chat, {document: kecantikan, mimetype: 'application/pdf', fileName: `Kecantikan.pdf`}, {quoted:m}).catch ((err) => m.reply(oh))
-          
-          hisoka.sendMessage(m.chat, {document: muslim, mimetype: 'application/pdf', fileName: `Muslim.pdf`}, {quoted:m}).catch ((err) => m.reply(oh))
-          
           hisoka.sendMessage(m.chat, {document: minum, mimetype: 'application/pdf', fileName: `Minuman.pdf`}, {quoted:m}).catch ((err) => m.reply(oh))
+          break
+case "produklaundry":
+     
+          laundry = await getBuffer(`https://a.uguu.se/VVcEOAt.pdf`)
+          		
+          
+          
+          
           
           hisoka.sendMessage(m.chat, {document: laundry, mimetype: 'application/pdf', fileName: `UpLaundry.pdf`}, {quoted:m}).catch ((err) => m.reply(oh))
           break
