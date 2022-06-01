@@ -556,7 +556,7 @@ case 'menu':
 case 'help':
 anu = `
  Hallo ${pushname} ..... Aku Jebot, Bot J Group.
-Ada yang bisa kami bantu? tes
+Ada yang bisa kami bantu? 
 
 
 J Group Layanan
@@ -575,8 +575,9 @@ Jika Anda ingin melihat layanan yang kami tawarkan silakan pakai menu ini
 #listlayanan
 
 J Group juga menjual berbagai paket usaha & konsultasi usaha secara gratis. Jika Anda ingin melihat paket usaha yang kami tawarkan silakan pakai menu ini
-!listproduk
-!konsultasi
+
+#listproduk
+#konsultasi
 
 
 
@@ -614,6 +615,10 @@ J Group juga menjual berbagai paket usaha & konsultasi usaha secara gratis. Jika
                 }), { userJid: m.chat, quoted: m })
                 hisoka.relayMessage(m.chat, template.message, { messageId: template.key.id })
                 break
+case "konsultasi":
+   reply("Mohon menunggu.. sedang di hubungkan dengan admin")
+   break
+Admin akan membalas chat anda
 case "listusaha":
 
                           secctions = [
