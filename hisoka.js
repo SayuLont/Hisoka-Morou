@@ -556,7 +556,7 @@ case 'menu':
 case 'help':
 anu = `
  Hallo ${pushname} ..... Aku Jebot, Bot J Group.
-Ada yang bisa kami bantu?
+Ada yang bisa kami bantu? tes
 
 
 J Group Layanan
