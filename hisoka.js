@@ -552,6 +552,7 @@ break
 
 
 
+
 case 'menu':
 case 'help':
 anu = `
@@ -572,7 +573,6 @@ Jika Anda ingin melihat layanan yang kami tawarkan silakan pakai menu ini
 #infodropship
 #infoagen
 #infokerjasama
-#listlayanan
 
 J Group juga menjual berbagai paket usaha & konsultasi usaha secara gratis. Jika Anda ingin melihat paket usaha yang kami tawarkan silakan pakai menu ini
 
@@ -616,7 +616,7 @@ J Group juga menjual berbagai paket usaha & konsultasi usaha secara gratis. Jika
                 hisoka.relayMessage(m.chat, template.message, { messageId: template.key.id })
                 break
 case "konsultasi":
-   reply("Mohon menunggu.. sedang di hubungkan dengan admin")
+   reply("Mohon menunggu.. sedang di hubungkan dengan admin , admin akan membalas chat anda.")
    break
 Admin akan membalas chat anda
 case "listusaha":
@@ -637,7 +637,7 @@ case "listusaha":
                           break
 
 case 'tentang':
-   reply(' J Group adalah Induk usaha yang dikelola oleh Jenever Kaligis. J Group terdiri dari lima usaha utama yaitu usaha Makanan & minuman, usaha tekstil, usaha pertanian, usaha kecantikan dan usaha campuran.')
+   reply(' J Group adalah Induk usaha yang dikelola oleh Jenever Kaligis. J Group terdiri dari lima usaha utama yaitu usaha Makanan & minuman, usaha tekstil, usaha pertanian, usaha kecantikan dan usaha digital.')
 break
 
 case "layananmakanan":
@@ -669,20 +669,24 @@ Jhee Production
 Spesialisasi produksi & penjualan T-shirt Distro dengan harga terjangkau
 
 Jilbabku
-Spesialisasi produksi & penjualan Jilbab dengan harga terjangkau`)
+Spesialisasi produksi & penjualan Jilbab dengan harga terjangkau
+
+Jaliilah Khimar
+Brand khimar yang baru di rilis J Group dengan harga yang sangat terjangkau`)
 
 break
 
 case "layananpertanian":
      
-reply (`*Layanan Pertanian*
+reply (`*Layanan Pertanian*\n
 Jen Sentosa Karya
 Spesialisasi produksi & penjualan seputaran pertanian dengan harga terjangkau`)
 
 break
 case "layanankecantikan":
      
-reply(`*Layanan Kecantikan*
+reply(`*Layanan Kecantikan*\n
+
 JN Studio
 Spesialisasi layanan perawatan kulit di Klinik studio dengan harga terjangkau
 
