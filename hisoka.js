@@ -617,16 +617,30 @@ J Group juga menjual berbagai paket usaha & konsultasi usaha secara gratis. Jika
                 }), { userJid: m.chat, quoted: m })
                 hisoka.relayMessage(m.chat, template.message, { messageId: template.key.id })
                 break
+case "listlayanan":
+
+                          secctions = [
+
+                          {
+                          title: " ",
+                          rows: [
+                          {title: "Layanan kecantikan", rowId: `layanankecantikan`, description: ` `},
+                          {title: "Layanan pertanian", rowId: `layananpertanian`, description: ` `},
+                          {title: "Layanan Pakaian", rowId: `layananpakaian`, description: ` `},
+                          {title: "Layanan Makanan & minuman", rowId: `layananmakanan`, description: ` `},                          {title: "Layanan Lainnya", rowId: `layananlainnya`, description: ` `}
+                          ]
+                          },
+                          ]
+                          hisoka.sendListMsg(m.chat, `Berikut beberapa layanan !`, hisoka.user.name, `Hello  !`, `Click Here`, secctions, )
+                          break
 
 case 'tentang':
    reply(' J Group adalah Induk usaha yang dikelola oleh Jenever Kaligis. J Group terdiri dari lima usaha utama yaitu usaha Makanan & minuman, usaha tekstil, usaha pertanian, usaha kecantikan dan usaha campuran.')
 break
 
-case "listusaha":
+case "layananmakanan":
 
-reply(`*LIST USAHA*
-
-*Layanan Makanan & Minuman*
+reply(` *Layanan Makanan & Minuman*
 
 Ice Motivasi
 Spesialisasi Franchise minuman olahan
