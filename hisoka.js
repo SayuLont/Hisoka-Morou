@@ -598,8 +598,8 @@ J Group juga menjual berbagai paket usaha & konsultasi usaha secara gratis. Jika
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Layanan Lain',
-                                    id: 'infobisnis'
+                                    displayText: 'List Usaha',
+                                    id: 'listusaha'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -617,7 +617,7 @@ J Group juga menjual berbagai paket usaha & konsultasi usaha secara gratis. Jika
                 }), { userJid: m.chat, quoted: m })
                 hisoka.relayMessage(m.chat, template.message, { messageId: template.key.id })
                 break
-case "listlayanan":
+case "listusaha":
 
                           secctions = [
 
