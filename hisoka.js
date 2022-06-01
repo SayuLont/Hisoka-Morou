@@ -567,11 +567,13 @@ Bergabunglah dengan J Group!
 Jadilah bagian dari keluarga besar J Group. Bertumbuh bersama memajukan Usaha di Indonesia.
 
 Jika Anda ingin melihat layanan yang kami tawarkan silakan pakai menu ini
+
 #listusaha
 #infodropship
 #infoagen
 #infokerjasama
 #listlayanan
+
 J Group juga menjual berbagai paket usaha & konsultasi usaha secara gratis. Jika Anda ingin melihat paket usaha yang kami tawarkan silakan pakai menu ini
 !listproduk
 !konsultasi
@@ -601,11 +603,6 @@ J Group juga menjual berbagai paket usaha & konsultasi usaha secara gratis. Jika
                                     displayText: 'List Usaha',
                                     id: 'listusaha'
                                 }
-                            }, {
-                                quickReplyButton: {
-                                    displayText: 'Contact Owner',
-                                    id: 'owner'
-                                }  
                             }, {
                                 quickReplyButton: {
                                     displayText: 'Tentang',
