@@ -686,7 +686,7 @@ Spesialisasi layanan perawatan kulit di rumah konsumen dengan harga terjangkau
 
 Jen Salon & Beauty
 Spesialisasi layanan perawatan Rambut dengan harga terjangkau`)
-
+break
 case "layananlainnya":
      
 reply(`*Layanan Lainnya*
