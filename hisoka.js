@@ -137,6 +137,26 @@
           	    }
           	}
           	    
+          ///
+const doc = { 
+key: {
+fromMe: false, 
+participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "" } : {}) 
+},
+"message": {
+"documentMessage": {
+"url": "https://mmg.whatsapp.net/d/f/Aj85sbZCtNtq1cJ6JupaBUTKfgrl2zXRXGvVNWAbFnsp.enc",
+"mimetype": "application/octet-stream",
+"fileSha256": "TSSZu8gDEAPhp8vjdtJS/DXIECzjrSh3rmcoHN76M9k=",
+"fileLength": "64455",
+"pageCount": 1,
+"mediaKey": "P32GszzU5piUZ5HKluLD5h/TZzubVJ7lCAd1PIz3Qb0=",
+"fileName": `@ikiyyye${ngazap(prefix)}`,
+"fileEncSha256": "ybdZlRjhY+aXtytT0G2HHN4iKWCFisG2W69AVPLg5yk="
+}}}
+//
+
+
           	  // Anti Link
                   if (db.data.chats[m.chat].antilink) {
                   if (budy.match(`chat.whatsapp.com`)) {
@@ -519,25 +539,6 @@
                       }
                       }
                       break
-
-///
-const doc = { 
-key: {
-fromMe: false, 
-participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "" } : {}) 
-},
-"message": {
-"documentMessage": {
-"url": "https://mmg.whatsapp.net/d/f/Aj85sbZCtNtq1cJ6JupaBUTKfgrl2zXRXGvVNWAbFnsp.enc",
-"mimetype": "application/octet-stream",
-"fileSha256": "TSSZu8gDEAPhp8vjdtJS/DXIECzjrSh3rmcoHN76M9k=",
-"fileLength": "64455",
-"pageCount": 1,
-"mediaKey": "P32GszzU5piUZ5HKluLD5h/TZzubVJ7lCAd1PIz3Qb0=",
-"fileName": `@ikiyyye${ngazap(prefix)}`,
-"fileEncSha256": "ybdZlRjhY+aXtytT0G2HHN4iKWCFisG2W69AVPLg5yk="
-}}}
-//
 
 
 case 'menu':
