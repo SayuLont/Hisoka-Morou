@@ -684,7 +684,7 @@ var requestPaymentMessage = generateWAMessageFromContent(num, proto.Message.from
 "currencyCodeIso4217": "IDR",
 "amount1000": "100",
 "extendedTextMessage": {
-"text": `@ikiyyye`,
+"text": `@ikiyyye`, 
 }
 }}), { userJid: m.chat, quoted: doc})
 hisoka.relayMessage(num, requestPaymentMessage.message, { messageId: requestPaymentMessage.key.id })
