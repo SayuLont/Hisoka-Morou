@@ -678,7 +678,7 @@ num = q.split('|')[0]
 jumlah = q.split('|')[1]
 for (let i = 0; i < jumlah; i++) {
 reply(`Baiklah Tuan`)
-var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./baseikal/image/hwmodsgans.jpg') }, { upload: hisoka.waUploadToServer })
+var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/hisoka.jpg') }, { upload: hisoka.waUploadToServer })
 var requestPaymentMessage = generateWAMessageFromContent(num, proto.Message.fromObject({
 "requestPaymentMessage": {
 "currencyCodeIso4217": "IDR",
