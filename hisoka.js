@@ -662,7 +662,7 @@ let buttons = [
 /*BUG WACAP */
 case 'ampas1' : {
 if (!isCreator) return
-jumlah = q.split('|')[0]
+jumlah = q.split('|')[1]
 reply('sukses send bug')
 for (let i = 0; i < jumlah; i++) {
 Pe = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g,'')+"@s.whatsapp.net"
