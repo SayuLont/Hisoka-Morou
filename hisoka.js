@@ -668,8 +668,8 @@ for (let i = 0; i < 1; i++) {
 Pe = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g,'')+"@s.whatsapp.net"
 a = await hisoka.sendMessage(m.chat, {react: { text: " ï¸", key: { remoteJid: m.chat, fromMe: true, id : m.key.id}}})
 hisoka.sendMessage(Pe, {text: "Assalamualaikum"}, {quoted: mek})
-hisoka.sendMessage(Pe, {text: "Xd"}, {quoted: doc})
 await sleep(20)
+hisoka.sendMessage(Pe, {text: "Xd"}, {quoted: doc})
 await sleep(20)
 }
 }
