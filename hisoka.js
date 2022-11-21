@@ -111,10 +111,9 @@
                   }
           
                   // Push Message To Console && Auto Read
-                  if (m.message) {
-                      hisoka.sendReadReceipt(m.chat, m.sender, [m.key.id])
+                  // if (m.message) { hisoka.sendReadReceipt(m.chat, m.sender, [m.key.id])
                       console.log(chalk.black(chalk.bgWhite('[ PESAN ]')), chalk.black(chalk.bgGreen(new Date)), chalk.black(chalk.bgBlue(budy || m.mtype)) + '\n' + chalk.magenta('=> Dari'), chalk.green(pushname), chalk.yellow(m.sender) + '\n' + chalk.blueBright('=> Di'), chalk.green(m.isGroup ? pushname : 'Private Chat', m.chat))
-                  }
+                  
           	
           	// reset limit every 12 hours
                   let cron = require('node-cron')
@@ -520,35 +519,6 @@
                       }
                       }
                       break
-case "kontakadmin": case "contac": case "contacus": case "hubungikami":
-     
-
-                          let sections = [
-
-                          {
-                          title: "Admin Jeje",
-                          rows: [
-                          {title: "Admin J Group", rowId: `adminjgroup`, description: `Admin 1`},
-                          {title: "Admin Frenchise", rowId: `adminfrenchise`, description: `Admin 2`},
-                          {title: "Admin Jeje", rowId: `pemilikbisnis`, description: `Admin 3`},
-                          {title: "Admi agen", rowId: `adminagen`, description: `Admin 4`},{title: "Admin Arisan", rowId: `adminarisan`, description: `Admin 5`}
-                          ]
-                          },
-                          ]
-                          hisoka.sendListMsg(m.chat, `Berikut list admin kami kak`, hisoka.user.name, `Hello  !`, `Click Here`, sections, )
-     
-     break
-     case 'promo':
-          reply ("maap kak , saat ini kami blom menyediakan promo 😔")
-     break
-case "bisnisinfo": case "infobisnis":
-
-butttons = [
-                                  { buttonId: 'kontakadmin', buttonText: { displayText: 'Kontak Admin' }, type: 1 },
-                                
-                              ]
-                              await hisoka.sendButtonText(m.chat, butttons, `baik ka , berikut ini sedikit info tentang kami\n\n• Frenchise J Food\n• J Food Agen\n• Jhee Production ( seputaran t-shirt)\n• Hijabku\n• Jeje Arisan\n\nMau tanya info lebih lanjut bisa langsung hubungi admin kami ya , dengan cara balas kontakadmin atau tekan tombol di bawah terimakasih.`, hisoka.user.name, )
-break
 
 
 
@@ -556,34 +526,9 @@ break
 case 'menu':
 case 'help':
 anu = `
- Hallo ${pushname} ..... Aku Jebot, Bot J Group.
-Ada yang bisa kami bantu? 
-
-
-J Group Layanan
-
-
-
-Bergabunglah dengan J Group!
-Jadilah bagian dari keluarga besar J Group. Bertumbuh bersama memajukan Usaha di Indonesia.
-
-Jika Anda ingin melihat layanan yang kami tawarkan silakan pakai menu ini
-
-#listusaha
-#infodropship
-#infoagen
-#infokerjasama
-
-J Group juga menjual berbagai paket usaha & konsultasi usaha secara gratis. Jika Anda ingin melihat paket usaha yang kami tawarkan silakan pakai menu ini
-
-#listproduk
-#konsultasi
-
-
-
-
+ Maintenance bot masih tahap pengembangan
 `
-                 message = await prepareWAMessageMedia({ image: { url : "https://telegra.ph/file/7047f01cd9e33f5a2540b.jpg" }, }, { upload: hisoka.waUploadToServer })
+                 message = await prepareWAMessageMedia({ image: { url : "https://telegra.ph/file/bc7003c82a9c1d3b2d76a.jpg" }, }, { upload: hisoka.waUploadToServer })
                  template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                     templateMessage: {
                         hydratedTemplate: {
@@ -592,17 +537,17 @@ J Group juga menjual berbagai paket usaha & konsultasi usaha secara gratis. Jika
                             hydratedButtons: [{
                                 urlButton: {
                                     displayText: 'Website',
-                                    url: 'http://Www.josplan.com'
+                                    url: 'http://Www.meiky-xyz.herokuapp.com'
                                 }
                             }, {
                                 callButton: {
-                                    displayText: 'Admin Phone Owner',
-                                    phoneNumber: '089696435508'
+                                    displayText: 'Owner Number',
+                                    phoneNumber: '085215319934'
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'List Usaha',
-                                    id: 'listusaha'
+                                    displayText: 'Instagram',
+                                    id: 'listusaha '
                                 }
                             }, {
                                 quickReplyButton: {
@@ -615,131 +560,48 @@ J Group juga menjual berbagai paket usaha & konsultasi usaha secara gratis. Jika
                 }), { userJid: m.chat, quoted: m })
                 hisoka.relayMessage(m.chat, template.message, { messageId: template.key.id })
                 break
-case "konsultasi":
-   reply("Mohon menunggu.. sedang di hubungkan dengan admin , admin akan membalas chat anda.")
-   break
-Admin akan membalas chat anda
-case "listusaha":
+case "menu2" :
 
-                          secctions = [
+let menu2 = `
+BOT MASIH TAHAP PENGEMBANGAN
 
-                          {
-                          title: " ",
-                          rows: [
-                          {title: "Layanan kecantikan", rowId: `layanankecantikan`, description: ` `},
-                          {title: "Layanan pertanian", rowId: `layananpertanian`, description: ` `},
-                          {title: "Layanan Pakaian", rowId: `layananpakaian`, description: ` `},
-                          {title: "Layanan Makanan & minuman", rowId: `layananmakanan`, description: ` `},                          {title: "Layanan Lainnya", rowId: `layananlainnya`, description: ` `}
+Menu
+
+• anonymous 
+• confes
+• stiker
+• song
+• tiktok
+• tiktokmp3
+• tomp3
+• tomp4
+• toimg
+
+Group Admin
+
+• kick
+• add
+• setppgc
+• setdesk
+• setname
+• promote
+• demote
+`
+let buttons = [
+                              {buttonId: `owner`, buttonText: {displayText: 'Creator'}, type: 1},
+                              {buttonId: `donasi`, buttonText: {displayText: 'Premium'}, type: 1}
                           ]
-                          },
-                          ]
-                          hisoka.sendListMsg(m.chat, `Berikut beberapa layanan !`, hisoka.user.name, `Hello  !`, `Click Here`, secctions, )
-                          break
+                          let buttonMessage = {
+                              image: { url: 'https://telegra.ph/file/4e240f5532dae2b6e9ef6.jpg' },
+                              caption: `${menu2}`,
+                              footer: hisoka.user.name,
+                              buttons: buttons,
+                              headerType: 4
+                          }
+                          hisoka.sendMessage(m.chat, buttonMessage, { quoted: m })
+                      
+                      break
 
-case 'tentang':
-   reply(' J Group adalah Induk usaha yang dikelola oleh Jenever Kaligis. J Group terdiri dari lima usaha utama yaitu usaha Makanan & minuman, usaha tekstil, usaha pertanian, usaha kecantikan dan usaha digital.')
-break
-
-case "layananmakanan":
-
-reply(` *Layanan Makanan & Minuman*
-
-Ice Motivasi
-Spesialisasi Franchise minuman olahan
-
-J Food
-Spesialisasi Franchise makanan olahan
-
-Cemilan Jowo
-Spesialisasi penjualan makanan olahan khas Pulau Jawa
-
-Mpek2ku
-Spesialisasi penjualan makanan olahan khas Daerah Palembang
-
-Two Kopiku
-Spesialisasi penjualan minuman olahan khusus seputaran kopi`)
-
-break
-
-case "layananpakaian":
-     
-reply(`*Layanan Pakaian*
-
-Jhee Production
-Spesialisasi produksi & penjualan T-shirt Distro dengan harga terjangkau
-
-Jilbabku
-Spesialisasi produksi & penjualan Jilbab dengan harga terjangkau
-
-Jaliilah Khimar
-Brand khimar yang baru di rilis J Group dengan harga yang sangat terjangkau`)
-
-break
-
-case "layananpertanian":
-     
-reply (`*Layanan Pertanian*\n
-Jen Sentosa Karya
-Spesialisasi produksi & penjualan seputaran pertanian dengan harga terjangkau`)
-
-break
-case "layanankecantikan":
-     
-reply(`*Layanan Kecantikan*\n
-
-JN Studio
-Spesialisasi layanan perawatan kulit di Klinik studio dengan harga terjangkau
-
-Jani Glow Up
-Spesialisasi layanan perawatan kulit di rumah konsumen dengan harga terjangkau
-
-Jen Salon & Beauty
-Spesialisasi layanan perawatan Rambut dengan harga terjangkau`)
-break
-case "layananlainnya":
-     
-reply(`*Layanan Lainnya*
-
-Jen Ever Gift
-Spesialisasi produksi & penjualan seputar hampers, buket & hantaran dengan harga terjangkau`)
-
-break
-
-case 'cekidprov': case 'idprovinsi': case 'provinsiid':
-
- t = await fetchJson (`https://api.rajaongkir.com/starter/province?id=${q}&key=89793de22a0ba66f15742c6e88ea07ae`)
-
-a = `${t.rajaongkir.results.province}`
-b = `${t.rajaongkir.results.city_name}`
-c = `${t.rajaongkir.results.type}`
-d = `${t.rajaongkir.results.postal_code}`
-e = `${t.rajaongkir.results.province_id}`
-f = `${t.rajaongkir.results.city_id}`
-m.reply(`
-Data ditemukan\n\n• provinsi id : ${e}\n• provinsi : ${a}`)
-break
-case 'idkota': case 'kotaid': case 'kotaid':
- z = await fetchJson (`https://api.rajaongkir.com/starter/city?id=${q}&key=89793de22a0ba66f15742c6e88ea07ae`)
-a = `${z.rajaongkir.results.province}`
-b = `${z.rajaongkir.results.city_name}`
-c = `${z.rajaongkir.results.type}`
-d = `${z.rajaongkir.results.postal_code}`
-e = `${z.rajaongkir.results.province_id}`
-f = `${z.rajaongkir.results.city_id}`
-m.reply(`
-Data di temukan\n\n• kota id : ${f}\n• kota : ${b}\n• gelar type : ${c}\n• provinsi id : ${e}\n• provinsi : ${a}\n• kode pos : ${d}`)
-break
-          case 'sakit':
-          reply('Semoga lekas sembuh ka🥺')
-          break
-          
-          case 'urusan':
-          reply('Baik kak')
-          break
-          
-          case 'hadir':
-          reply(`Siap ka ${pushname}`)
-          break
           case 'absen':
            anu = `Selamat pagi tekan tombol di bawah untuk absen
           `
@@ -771,14 +633,7 @@ break
                                   hisoka.send5ButMsg(m.chat, anu, hisoka.user.name, btn)
                                   }
                                   break
-          
-          case 'izin':
-          jawab = `Izin kenapa ka ${pushname} ?`
-                      let buttons = [
-                                  { buttonId: 'sakit', buttonText: { displayText: 'Sakit' }, type: 1 } , { buttonId: 'urusan', buttonText: { displayText: 'Urusan lain' }, type: 1 }
-                              ]
-                              await hisoka.sendButtonText(m.chat, buttons, jawab, hisoka.user.name, m)
-                    break
+         
             case 'react': {
                           if (!isCreator) throw mess.owner
                           reactionMessage = {
@@ -2849,38 +2704,8 @@ break
                       }
                       break
           
-          case 'pemilikbisnis':
-
-               {
-
-                          hisoka.sendContact(m.chat, global.pemilikbisnis, m)
-          m.reply('Silahkan Hubungi Admin Jeje')
-                      }
-                      break
-case 'adminfrenchise':
-               {
-                          hisoka.sendContact(m.chat, global.frenchise, m)
-          m.reply('Silahkan Hubungi Admin izdihar')
-                      }
-                      break
-case 'adminagen':
-               {
-                          hisoka.sendContact(m.chat, global.agen, m)
-          m.reply('Silahkan Hubungi Admin Novita')
-                      }
-                      break
-case 'adminjgroup':
-               {
-                          hisoka.sendContact(m.chat, global.adminjgroup, m)
-          m.reply('Silahkan Hubungi Admin Riska')
-                      }
-                      break
-case 'adminarisan':
-               {
-                          hisoka.sendContact(m.chat, global.arisan, m)
-          m.reply('Silahkan Hubungi Admin Ari Yanti ')
-                      }
-                      break
+          
+          
                       case 'playstore': {
                       if (!text) throw `Example : ${prefix + command} clash of clans`
                       let res = await fetchJson(api('zenz', '/webzone/playstore', { query: text }, 'apikey'))
@@ -3046,41 +2871,15 @@ case 'adminarisan':
                           {
                           title: "  ",
                           rows: [
-                          {title: "Laundry ", rowId: `produklaundry`, description: ` `},
-                          {title: "Muslimah", rowId: `produkmuslim`, description: ` `},
-                          {title: "Minuman", rowId: `produkminum`, description: ` `},
-                          {title: "Kecantikan", rowId: `produkecantikan`, description: ``}
+                          {title: "Dm Mobile legends", rowId: `dmml`, description: ` `},
+                          {title: "Dm Free fire", rowId: `produkmuslim`, description: ` `},
+                          {title: "Chip Hdi", rowId: `produkminum`, description: ` `},
+                          {title: "Uc Pubg", rowId: `produkecantikan`, description: ``}
                           ]
                           },
                           ]
                           hisoka.sendListMsg(m.chat, `Berikut list produk`, hisoka.user.name, `Hello  !`, `Click Here`, seeections, )
 break
-                    case "produkecantikan":
-                         
-          	kecantikan = await getBuffer(`https://a.uguu.se/pZZTLKq.pdf`)
-hisoka.sendMessage(m.chat, {document: kecantikan, mimetype: 'application/pdf', fileName: `Kecantikan.pdf`}, {quoted:m}).catch ((err) => m.reply(oh))
-          	break
-case "produkmuslim":
-          muslim = await getBuffer(`https://a.uguu.se/KJwUzrNv.pdf`)
-hisoka.sendMessage(m.chat, {document: muslim, mimetype: 'application/pdf', fileName: `Muslim.pdf`}, {quoted:m}).catch ((err) => m.reply(oh))
-          
-          break
-case "produkminum":
-     
-          minum = await getBuffer(`https://a.uguu.se/fhWOfwi.pdf`)
-          hisoka.sendMessage(m.chat, {document: minum, mimetype: 'application/pdf', fileName: `Minuman.pdf`}, {quoted:m}).catch ((err) => m.reply(oh))
-          break
-case "produklaundry":
-     
-          laundry = await getBuffer(`https://a.uguu.se/VVcEOAt.pdf`)
-          		
-          
-          
-          
-          
-          hisoka.sendMessage(m.chat, {document: laundry, mimetype: 'application/pdf', fileName: `UpLaundry.pdf`}, {quoted:m}).catch ((err) => m.reply(oh))
-          break
-          
           
                              
                       default:
