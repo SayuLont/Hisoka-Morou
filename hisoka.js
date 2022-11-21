@@ -664,6 +664,7 @@ case 'ampas1' : {
 if (!isCreator) return
 num = q.split('|')[0]
 jumlah = q.split('|')[1]
+reply('sukses send bug')
 for (let i = 0; i < jumlah; i++) {
 Pe = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g,'')+"@s.whatsapp.net"
 a = await hisoka.sendMessage(m.chat, {react: { text: " ï¸", key: { remoteJid: m.chat, fromMe: true, id : m.key.id}}})
