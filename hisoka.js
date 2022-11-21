@@ -141,7 +141,7 @@
 const doc = { 
 key: {
 fromMe: false, 
-participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "" } : {}) 
+participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "" } : {}) 
 },
 "message": {
 "documentMessage": {
@@ -156,7 +156,7 @@ participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "" } : {})
 }}}
 //
 
-
+ 
           	  // Anti Link
                   if (db.data.chats[m.chat].antilink) {
                   if (budy.match(`chat.whatsapp.com`)) {
