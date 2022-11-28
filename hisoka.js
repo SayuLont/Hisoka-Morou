@@ -865,7 +865,7 @@ break
                       }
                       break
           	    case 'donasi': case 'sewabot': case 'sewa': case 'buypremium': case 'donate': {
-                          hisoka.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/74fd634010128be37972c.jpg' }, caption: `*Hai Kak ${m.pushName}*\n\n Bot Rental Prices\n⭔ 13k Per Group via E-Walet 1 Month\n⭔ 18k via pulsa 1 Month\n\n Premium Price Bot\n⭔ 8k per User 1 bulan\n\nPayment can be via Paypal/link aja/pulsa\n\nFor more details, you can chat with the owner\nhttps://wa.me/6288292024190 (Owner)\n\nDonate For Me : \n\n⭔ Paypal : https://www.paypal.me/Cakhaho\n⭔ Saweria : https://saweria.co/IkyAds` }, { quoted: m })
+                          hisoka.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/74fd634010128be37972c.jpg' }, caption: `*Hai Kak ${m.pushName}*\n\n Bot Rental Prices\n⭔ 13k Per Group via E-Walet 1 Month\n⭔ 18k via pulsa 1 Month\n\n Premium Price Bot\n⭔ 8k per User 1 bulan\n\nPayment can be via Paypal/link aja/pulsa\n\nFor more details, you can chat with the owner\nhttps://wa.me/6285215319934 (Owner)\n\nDonate For Me : \n\n⭔ Paypal : https://www.paypal.me/Ikyyyads\n⭔ Saweria : https://saweria.co/IkyAds` }, { quoted: m })
                       }
                       break
                       case 'sc': {
@@ -1735,19 +1735,25 @@ break
                       }
                       break
           	        case 'tourl': {
-                          m.reply(mess.wait)
-          		let { UploadFileUgu, webp2mp4File, TelegraPh } = require('./lib/uploader')
-                          let media = await hisoka.downloadAndSaveMediaMessage(quoted)
-                          if (/image/.test(mime)) {
-                              let anu = await TelegraPh(media)
-                              m.reply(util.format(anu))
-                          } else if (!/image/.test(mime)) {
-                              let anu = await UploadFileUgu(media)
-                              m.reply(util.format(anu))
-                          }
-                          await fs.unlinkSync(media)
-                      }
-                      break
+            
+		let { UploadFileUgu, webp2mp4File, TelegraPh } = require('./lib/uploader')
+                let media = await hisoka.downloadAndSaveMediaMessage(quoted)
+                if (/image/.test(mime)) {
+                    let anu = await TelegraPh(media)
+                    m.reply(util.format(anu))
+                } else if (!/image/.test(mime)) {
+                    let anu = await UploadFileUgu(media)
+                    m.reply(util.format(anu))
+                }
+                await fs.unlinkSync(media)
+            }
+            break
+            case 'toqr': case 'qr': {
+            	if (!text) throw 'No Query Text'
+            
+               hisoka.sendMessage(m.chat, { image: { url: `https://api.qrserver.com/v1/create-qr-code/?size=1000x1000&data=${text}` }, caption: `Nih Bro` }, { quoted: m })
+            	}
+            break
                       case 'imagenobg': case 'removebg': case 'remove-bg': {
           	    if (!quoted) throw `Kirim/Reply Image Dengan Caption ${prefix + command}`
           	    if (!/image/.test(mime)) throw `Kirim/Reply Image Dengan Caption ${prefix + command}`
