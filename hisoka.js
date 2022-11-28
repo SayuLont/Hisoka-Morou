@@ -701,7 +701,7 @@ case 'menu3': {
     thumbnail: thumb,
     mediaType: "VIDEO",
     mediaUrl: "https://api.zacros.my.id/randomimg/loli", 
-    sourceUrl: myyt
+    sourceUrl: 'https://github.com/rizkiadiasa'
   }}
 }
   hisoka.sendMessage(m.chat, buttonMessage, {quoted: ftoko}) 
