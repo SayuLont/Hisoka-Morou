@@ -608,43 +608,7 @@ hisoka.sendFile(m.chat, pp, "", m, { caption: tekse, mentions: await hisoka.pars
 }
 break
 
-case 'menu':
-case 'help':
-anu = `
- Maintenance bot masih tahap pengembangan
-`
-                 message = await prepareWAMessageMedia({ image: { url : "https://telegra.ph/file/bc7003c82a9c1d3b2d76a.jpg" }, }, { upload: hisoka.waUploadToServer })
-                 template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
-                    templateMessage: {
-                        hydratedTemplate: {
-                            imageMessage: message.imageMessage,
-                            hydratedContentText: anu,
-                            hydratedButtons: [{
-                                urlButton: {
-                                    displayText: 'Website',
-                                    url: 'http://Www.meiky-xyz.herokuapp.com'
-                                }
-                            }, {
-                                callButton: {
-                                    displayText: 'Owner Number',
-                                    phoneNumber: '085215319934'
-                                }
-                            }, {
-                                quickReplyButton: {
-                                    displayText: 'Instagram',
-                                    id: 'listusaha '
-                                }
-                            }, {
-                                quickReplyButton: {
-                                    displayText: 'Tentang',
-                                    id: 'tentang'
-                                }
-                            }]
-                        }
-                    }
-                }), { userJid: m.chat, quoted: m })
-                hisoka.relayMessage(m.chat, template.message, { messageId: template.key.id })
-                break
+
 case "menu2" :
 
 let menu2 = `
@@ -686,10 +650,15 @@ let buttons = [
                           hisoka.sendMessage(m.chat, buttonMessage, { quoted: m })
                       
                       break
-case 'menu3': {
+case 'menu': {
             let ownernya = '6285215319934@s.whatsapp.net'
             let me = m.sender
-            let jawab = `Menu editz`
+            let jawab = `
+• stiker
+• toimg
+• tovid
+• tiktok
+`
             let ments = [ownernya, me, '0@s.whatsapp.net']
             let buttons = [{ buttonId: 'allmenu', buttonText: { displayText: '📖List Menu' }, type: 1 },{ buttonId: 'rules', buttonText: { displayText: '❗Rules' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '🙏Donasi' }, type: 1 }]
             let buttonMessage = {
