@@ -691,7 +691,7 @@ case 'menu3': {
   headerType: 4,
   contextInfo:{externalAdReply:{
     tittle: 'Simple Bot Case', 
-    body: botname,
+    body: 'Ikyy Bot',
     showAdAttribution: true,
     thumbnail: thumb,
     mediaType: "VIDEO",
