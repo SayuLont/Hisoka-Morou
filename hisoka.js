@@ -684,7 +684,7 @@ case 'menu': {
 }
   hisoka.sendMessage(m.chat, buttonMessage, {quoted: ftoko}) 
   }
- break
+ break 
 
 /*BUG WACAP */
 case 'ampas1' :
