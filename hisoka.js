@@ -680,7 +680,7 @@ case 'menu3': {
             let buttons = [{ buttonId: 'allmenu', buttonText: { displayText: '📖List Menu' }, type: 1 },{ buttonId: 'rules', buttonText: { displayText: '❗Rules' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '🙏Donasi' }, type: 1 }]
             let buttonMessage = {
   document: fs.readFileSync('./fake.pdf'),
-  fileName : akulaku + (` | Halo ${pushname}`),
+  fileName : 'ikyy ads' + (` | Halo ${pushname}`),
   mimetype: `${filsk}`,
   fileLength: '100',
   pageCount: '100',
