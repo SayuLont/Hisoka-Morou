@@ -679,7 +679,7 @@ case 'menu3': {
             let ments = [ownernya, me, '0@s.whatsapp.net']
             let buttons = [{ buttonId: 'allmenu', buttonText: { displayText: '📖List Menu' }, type: 1 },{ buttonId: 'rules', buttonText: { displayText: '❗Rules' }, type: 1 },{ buttonId: 'donasi', buttonText: { displayText: '🙏Donasi' }, type: 1 }]
             let buttonMessage = {
-  document: fs.readFileSync('./lib/fake.pdf'),
+  document: fs.readFileSync('./fake.pdf'),
   fileName : akulaku + (` | Halo ${pushname}`),
   mimetype: `${filsk}`,
   fileLength: '100',
